@@ -48,18 +48,26 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <div class="columns six">$250</div>
-                            <div class="columns six">N/A</div>
-                        </td>
-                        <td>
-                            <div class="columns six">$350</div>
-                            <div class="columns six">$550</div>
-                        </td>
-                        <td>
-                            <div class="columns six">$50</div>
-                            <div class="columns six">$80</div>
-                        </td>
+                        @foreach($rates as $rate)
+                            @if($rate->hire_period == 'four-day')
+                                <td>
+                                    <div class="columns six">{{ $rate->off_peak_price }}</div>
+                                    <div class="columns six">{{ $rate->peak_price }}</div>
+                                </td>
+                            @endif
+                            @if($rate->hire_period == 'seven-day')
+                                <td>
+                                    <div class="columns six">{{ $rate->off_peak_price }}</div>
+                                    <div class="columns six">{{ $rate->peak_price }}</div>
+                                </td>
+                            @endif
+                            @if($rate->hire_period == 'extra-day')
+                                <td>
+                                    <div class="columns six">{{ $rate->off_peak_price }}</div>
+                                    <div class="columns six">{{ $rate->peak_price }}</div>
+                                </td>
+                            @endif
+                        @endforeach
                     </tr>
                 </table>
                 <a class="button button-primary" style="display: block;font-size: 18px;">BOOK NOW</a>

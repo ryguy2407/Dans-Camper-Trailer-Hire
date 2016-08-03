@@ -25,14 +25,14 @@
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/campers/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7157895">
-              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+            <state vertical-scroll-proportion="2.2421052">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
                 <element signature="e#73#153#0#HTML" expanded="true" />
                 <element signature="e#243#264#0#HTML" expanded="true" />
                 <element signature="e#537#557#0#HTML" expanded="true" />
                 <element signature="e#1145#1165#0#HTML" expanded="true" />
-                <element signature="e#2649#2688#0#HTML" expanded="true" />
+                <element signature="e#3265#3304#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,8 +57,8 @@
         <option value="$PROJECT_DIR$/database/migrations/2016_08_03_220906_add_camper_video_to_campers_table.php" />
         <option value="$PROJECT_DIR$/app/Rate.php" />
         <option value="$PROJECT_DIR$/app/Camper.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CamperController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_03_221253_create_rates_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CamperController.php" />
         <option value="$PROJECT_DIR$/resources/views/campers/show.blade.php" />
       </list>
     </option>
@@ -474,6 +474,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -835,31 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CamperController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43599033">
-          <caret line="53" column="84" selection-start-line="53" selection-start-column="84" selection-end-line="53" selection-end-column="84" />
-          <folding>
-            <marker date="1470262889000" expanded="true" signature="44:122" placeholder="..." />
-            <marker date="1470262889000" expanded="true" signature="165:1731" placeholder="{...}" />
-            <marker date="1470262889000" expanded="true" signature="175:271" placeholder=" Display a listing of the resource. ..." />
-            <marker date="1470262889000" expanded="true" signature="301:324" placeholder="{...}" />
-            <marker date="1470262889000" expanded="true" signature="333:437" placeholder=" Show the form for creating a new resource. ..." />
-            <marker date="1470262889000" expanded="true" signature="468:491" placeholder="{...}" />
-            <marker date="1470262889000" expanded="true" signature="500:654" placeholder=" Store a newly created resource in storage. ..." />
-            <marker date="1470262889000" expanded="true" signature="700:723" placeholder="{...}" />
-            <marker date="1470262889000" expanded="true" signature="732:849" placeholder=" Display the specified resource. ..." />
-            <marker date="1470262889000" expanded="true" signature="881:1073" placeholder="{...}" />
-            <marker date="1470262889000" expanded="true" signature="1082:1217" placeholder=" Show the form for editing the specified resource. ..." />
-            <marker date="1470262889000" expanded="true" signature="1249:1272" placeholder="{...}" />
-            <marker date="1470262889000" expanded="true" signature="1281:1458" placeholder=" Update the specified resource in storage. ..." />
-            <marker date="1470262889000" expanded="true" signature="1510:1533" placeholder="{...}" />
-            <marker date="1470262889000" expanded="true" signature="1542:1671" placeholder=" Remove the specified resource from storage. ..." />
-            <marker date="1470262889000" expanded="true" signature="1706:1729" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_03_221253_create_rates_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5217391">
@@ -877,16 +857,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CamperController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4526316">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <marker date="1470264249000" expanded="true" signature="44:122" placeholder="..." />
+            <marker date="1470264249000" expanded="true" signature="165:1731" placeholder="{...}" />
+            <marker date="1470264249000" expanded="true" signature="175:271" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1470264249000" expanded="true" signature="301:324" placeholder="{...}" />
+            <marker date="1470264249000" expanded="true" signature="333:437" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1470264249000" expanded="true" signature="468:491" placeholder="{...}" />
+            <marker date="1470264249000" expanded="true" signature="500:654" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1470264249000" expanded="true" signature="700:723" placeholder="{...}" />
+            <marker date="1470264249000" expanded="true" signature="732:849" placeholder=" Display the specified resource. ..." />
+            <marker date="1470264249000" expanded="true" signature="881:1073" placeholder="{...}" />
+            <marker date="1470264249000" expanded="true" signature="1082:1217" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1470264249000" expanded="true" signature="1249:1272" placeholder="{...}" />
+            <marker date="1470264249000" expanded="true" signature="1281:1458" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1470264249000" expanded="true" signature="1510:1533" placeholder="{...}" />
+            <marker date="1470264249000" expanded="true" signature="1542:1671" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1470264249000" expanded="true" signature="1706:1729" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/campers/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7157895">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        <state vertical-scroll-proportion="2.2421052">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
             <element signature="e#73#153#0#HTML" expanded="true" />
             <element signature="e#243#264#0#HTML" expanded="true" />
             <element signature="e#537#557#0#HTML" expanded="true" />
             <element signature="e#1145#1165#0#HTML" expanded="true" />
-            <element signature="e#2649#2688#0#HTML" expanded="true" />
+            <element signature="e#3265#3304#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
