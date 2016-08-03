@@ -13,4 +13,12 @@ class Camper extends Model
 	{
 		return $this->hasMany('App\Rate');
 	}
+
+	/*
+	 * Get all the images related to the camper
+	 */
+	public function images()
+	{
+		return $this->hasMany('App\CamperImage')->orderBy('image_order');
+	}
 }

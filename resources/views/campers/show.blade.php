@@ -12,8 +12,10 @@
     <div class="container content">
         <div class="row">
             <div class="columns six">
-                <div class="imageWrapper">
-                    <img src="/images/MDC/hero.jpg" style="width: 100%;" alt="">
+                <div class="imageWrapper cycle-slideshow" data-cycle-slide="img" data-cycle-pager="div.pager" data-cycle-pause-on-hover="true">
+                    @foreach($images as $image)
+                        <img src="{{ $image->image_url }}" style="width: 100%;" alt="{{ $image->image_alt }}">
+                    @endforeach
                     <h1>{{ $camper->camper_title }}</h1>
                 </div>
                 <div class="pager"></div>

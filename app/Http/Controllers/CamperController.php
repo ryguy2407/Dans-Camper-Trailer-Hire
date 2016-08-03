@@ -51,7 +51,11 @@ class CamperController extends Controller
     {
         $camper = Camper::where('camper_slug', $id)->first();
         $rates = $camper->rates;
-        return view('campers.show')->with('camper', $camper)->with('rates', $rates);
+        $images = $camper->images;
+        return view('campers.show')
+            ->with('camper', $camper)
+            ->with('rates', $rates)
+            ->with('images', $images);
     }
 
     /**

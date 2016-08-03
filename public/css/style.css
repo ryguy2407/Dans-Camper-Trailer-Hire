@@ -238,6 +238,7 @@ div.content table td > table td {
 
 div.columns div.imageWrapper {
     position: relative;
+    overflow: hidden;
 }
 
 div.imageWrapper h1 {
@@ -250,10 +251,27 @@ div.imageWrapper h1 {
     font-size: 24px;
     padding: 10px 20px;
     letter-spacing: 1px;
+    z-index: 1000;
 }
 
 div.columns div.pager {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+div.columns div.pager span:hover {
+    cursor: pointer;
+    color: #999;
+}
+
+div.columns div.pager span {
+    color: #bdbdbd;
+    margin: 0 2px;
+    font-size: 20px;
+}
+
+div.columns div.pager span.cycle-pager-active {
+    color: #444;
 }
 
 div.bookingButton {
