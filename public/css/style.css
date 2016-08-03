@@ -1,0 +1,383 @@
+body {
+    font-family: 'Patua One', cursive;
+}
+
+form.bookingForm h4 {
+    font-family: 'Patua One', cursive;
+}
+
+p, div.content li, div.content form {
+    font-family: 'Open Sans', sans-serif;
+}
+
+div.content input, div.content textarea {
+    width: 100%;
+}
+
+div.content input[type=submit] {
+    color: #fff;
+}
+
+div.content li {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #425b54;
+}
+
+a {
+    color: #2cb138;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button.button-primary {
+    background-color: #f0512b;
+    border: none;
+}
+
+
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+div.topMeta h6 {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+div.logo img {
+    width: 80%;
+}
+
+div.slideText a {
+    width: 100%;
+    font-size: 24px;
+    padding: 28px 20px;
+    display: block;
+    height: inherit;
+    margin: 10px 0;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+div.mainNav ul li {
+    display: inline;
+}
+
+div.mainNav ul li a {
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 24px;
+    color: #425b54;
+}
+
+div.slideshowWrapper {
+    position: relative;
+}
+
+div.background-bar {
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    background: #425b54;
+    top: 0px;
+}
+
+div.slideshowWrapper {
+    margin-top: 0px;
+}
+
+div.slideshowWrapper div.camper img {
+    position:absolute;
+    width: 100%;
+}
+
+div.camperText {
+    margin-top: 20px;
+}
+
+div.camperText p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+div.camperText a.button {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+}
+
+.white {
+    color: #fff;
+}
+
+.orange {
+    color: #f0512b;
+}
+
+div.slideText div.title {
+    width: 60%;
+    float: left;
+}
+
+div.slideText div.title h1 {
+    font-size: 42px;
+}
+
+div.slideText div.link {
+    width: 40%;
+    float: left;
+}
+
+div.slideText h3 {
+    margin-bottom: 0px;
+}
+
+div.slideshowWrapper div.camper {
+    margin-top: -100px;
+}
+
+div.slide {
+    width: 100%;
+}
+
+#adv-custom-pager {
+    margin-bottom: 40px;
+}
+
+#adv-custom-pager div.columns img {
+    width: 100%;
+}
+
+#adv-custom-pager div.columns {
+    background: #f7f7f7;
+    position: relative;
+    padding: 10px;
+}
+
+
+#adv-custom-pager div.columns h2 {
+    color: #fff;
+    background: #f0512b;
+    text-align: center;
+    display: block;
+    padding: 8px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    width: 50%;
+}
+
+#adv-custom-pager div.cycle-pager-active {
+    background: #dedede;
+}
+
+.mobileNav {
+    padding: 8px;
+    margin: 0;
+    height: inherit;
+    line-height: 1;
+    background: #fff;
+    font-size: 18px;
+    display: none;
+}
+
+div.pageHero {
+    width: 100%;
+    height: 150px;
+    margin-top: -100px;
+    position: relative;
+    z-index: -1;
+}
+
+div.pageHero h1 {
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+div.opaque {
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 150px;
+    position: absolute;
+}
+
+div.content {
+    padding: 40px 0;
+}
+
+div.content table td > table {
+    margin: 0px;
+    width: 100%;
+}
+
+div.content table td > table td {
+    border-bottom: none;
+}
+
+div.columns div.imageWrapper {
+    position: relative;
+}
+
+div.imageWrapper h1 {
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    background: #f0512b;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+div.columns div.pager {
+    margin-bottom: 20px;
+}
+
+div.bookingButton {
+    position: absolute;
+    right: 0px;
+}
+
+div.bookingButton a {
+    background: #f0512b;
+    color: #fff;
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+div.bookingButton a:hover, a.button:hover, a.button-primary:hover {
+    background: #bb3a1b !important;
+    text-decoration: none;
+}
+
+div.errors {
+    background: #fce1da;
+    padding: 10px;
+    border-radius: 5px;
+    color: #444;
+}
+
+div.errors ul li {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+div.errors ul li:last-child {
+    margin-bottom: 0px;
+}
+
+
+div.errors ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.embed-container {
+    position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;
+} .embed-container iframe, .embed-container object, .embed-container embed {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+div.footer {
+    background: #425b54;
+    padding: 20px 0;
+}
+
+div.footer p {
+    color: #fff;
+    margin: 0px;
+}
+
+div#map {
+    width: 100%;
+    height: 400px;
+}
+
+@media (max-width: 1200px) {
+    div.slideText div.title, div.slideText div.link {
+        width: 100%;
+        text-align: center;
+    }
+
+    div.slideshowWrapper div.camper {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 945px) {
+    div.logo img {
+        width: 50%;
+    }
+
+    div.logo {
+        text-align: center;
+    }
+
+    div.topMeta {
+        text-align: center;
+    }
+
+    div.topMeta h6 {
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+
+    div.mainNav {
+        margin-top: 20px;
+        display: none;
+    }
+
+    div.mainNav ul li {
+        display: block;
+        text-align: left;
+    }
+
+    .mobileNav {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    div.slideshowWrapper div.camper {
+        margin-top: 20px;
+    }
+    
+    div.slideshowWrapper div.camper img {
+        position: relative;
+    }
+
+    #adv-custom-pager {
+        display: none;
+    }
+
+    div.pageHero {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dan's Camper Trailer Hire</title>
+	<link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/skeleton.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="/js/jquery-3.1.0.min.js"></script>
+	<script src="/js/cycle2.js"></script>
+	<script src="https://use.fontawesome.com/8cf984e967.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(document).ready(function(){
+				$('div.background-bar').css('height', $('div.slideshowWrapper div.slideText').outerHeight() + 20);
+
+				$('div.slideText').each(function(){
+					var bgBar = $('div.background-bar').outerHeight();
+					var height = $(this).outerHeight();
+					$(this).css('marginTop', (bgBar - height) / 2);
+				});
+
+				$('button.mobileNav').on('click', function(){
+					$('div.mainNav').slideToggle();
+				});
+
+				var maxHeight = 0;
+				$('#adv-custom-pager div.columns').each(function(){
+					maxHeight = maxHeight > $(this).outerHeight() ? maxHeight : $(this).outerHeight();
+				});
+				$('#adv-custom-pager div.columns').css('height', maxHeight);
+
+				$('div.pageHeader h1').css('marginTop', Math.abs(($('div.pageHeader h1').outerHeight() - 150) / 2));
+			});
+		});
+	</script>
+</head>
+<body>
+
+<div class="container header">
+	<div class="row">
+		<div class="three columns logo">
+			<a href="/">
+				<img src="/images/logo.png" alt="Dan's Camper Trailer Hire">
+			</a>
+		</div>
+		<div class="nine columns">
+			<div class="topMeta text-right">
+				<h6 style="font-size: 18px;">(07) 1234 5678</h6>
+				<h6 style="font-size: 18px;">bookings@danscampertrailerhire.com.au</h6>
+			</div>
+			<button class="mobileNav"><i class="fa fa-bars" aria-hidden="true"></i> Toggle navigation</button>
+			<div class="mainNav text-right">
+				<ul>
+					<li><a href="/">HOME</a></li>
+					<li><a href="/rates">OUR RATES</a></li>
+					<li><a href="#">BOOK ONLINE</a></li>
+					<li><a href="/contact">CONTACT US</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
