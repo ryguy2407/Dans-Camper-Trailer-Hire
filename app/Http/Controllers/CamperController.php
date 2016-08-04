@@ -49,7 +49,12 @@ class CamperController extends Controller
      */
     public function show($id)
     {
-        $camper = Camper::where('camper_slug', $id)->first();
+        if(is_numeric($id)) {
+            $camper = Camper::findOrFail($id);
+            return redirect()->action('CamperController@show', ['camper_slug' => $camper->camper_slug]);
+        }
+
+        $camper = Camper::where('camper_slug', $id)->orWhere('id', $id)->first();
         $rates = $camper->rates;
         $images = $camper->images;
         return view('campers.show')

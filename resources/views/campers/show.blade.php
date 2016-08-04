@@ -14,7 +14,9 @@
             <div class="columns six">
                 <div class="imageWrapper cycle-slideshow" data-cycle-slide="img" data-cycle-pager="div.pager" data-cycle-pause-on-hover="true">
                     @foreach($images as $image)
-                        <img src="{{ $image->image_url }}" style="width: 100%;" alt="{{ $image->image_alt }}">
+                        @if($image->image_url && $image->featured == 0)
+                            <img src="{{ $image->image_url }}" style="width: 100%;" alt="{{ $image->image_alt }}">
+                        @endif
                     @endforeach
                     <h1>{{ $camper->camper_title }}</h1>
                 </div>

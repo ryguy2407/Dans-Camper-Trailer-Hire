@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Camper;
+use App\CamperImage;
 use App\Page;
 use Illuminate\Http\Request;
 
@@ -11,7 +13,8 @@ class PagesController extends Controller
 {
 	public function home()
 	{
-		return view('layouts.home');
+		$campers = Camper::all();
+		return view('layouts.home')->with('campers', $campers);
 	}
 
 	public function show($id)
