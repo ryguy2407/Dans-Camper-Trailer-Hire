@@ -11,7 +11,9 @@
 |
 */
 
-Route::resource('booking', 'BookingsController');
+Route::resource('bookings', 'BookingsController');
+Route::resource('camper.booking', 'CamperBookingController');
+Route::get('/booking-enquiry', ['uses' => 'BookingsController@page']);
 Route::get('/', ['uses' => 'PagesController@home']);
 Route::get('/{id}', ['uses' => 'PagesController@show']);
 Route::resource('camper', 'CamperController');

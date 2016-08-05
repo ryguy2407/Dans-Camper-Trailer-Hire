@@ -12,23 +12,21 @@
     <div class="container content">
 
         <div class="row">
-            <div class="columns six text-center offset-by-three">
-                <h1>BOOK A CAMPER</h1>
-                <h4 style="font-family: 'Open Sans', sans-serif;">
-                    Please select which camper you would to make a booking enquiry on.
-                </h4>
+            <div class="columns twelve text-center">
+                <h1>ALL BOOKINGS</h1>
+
             </div>
         </div>
 
         <div class="row">
-            @foreach($campers as $camper)
-                <div class="columns three text-center">
-                    <a href="{{ route('camper.show', ['id' => $camper->id]) }}">
-                        @if($camper->images->first())
-                            <img src="{{ $camper->images->first()->image_url }}" style="width: 100%;">
-                        @endif
-                        <h3>{{ $camper->camper_title }}</h3>
-                    </a>
+            @foreach($bookings as $booking)
+                <div class="columns twelve">
+                    <h4>{{ $booking->first_name }} {{ $booking->last_name }}</h4>
+                    <ul>
+                    @foreach($booking->campers as $camper)
+                         <li>{{ $camper->camper_title }}</li>
+                    @endforeach
+                    </ul>
                 </div>
             @endforeach
         </div>

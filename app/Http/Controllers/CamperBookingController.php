@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Booking;
-use App\Camper;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class BookingsController extends Controller
+class CamperBookingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,14 +15,7 @@ class BookingsController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::all();
-        return view('bookings.index')->with('bookings', $bookings);
-    }
-
-    public function page()
-    {
-        $campers = Camper::all();
-        return view('bookings.page')->with('campers', $campers);
+        return 'booking form for a camper';
     }
 
     /**
