@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02af4d1a-34f8-45ba-ab59-0c0d8b262448" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/GIC/slide.png" afterPath="$PROJECT_DIR$/public/images/GIC/slide.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Camper.php" afterPath="$PROJECT_DIR$/app/Camper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/CamperImage.php" afterPath="$PROJECT_DIR$/app/CamperImage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CamperController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CamperController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/campers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/campers/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/header.php" afterPath="$PROJECT_DIR$/resources/views/partials/header.php" />
     </list>
     <ignored path="dans.iws" />
@@ -328,38 +324,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -463,7 +427,7 @@
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498096" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498096" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -509,26 +473,26 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <marker date="1470305908000" expanded="true" signature="44:122" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="165:2043" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="175:271" placeholder=" Display a listing of the resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="301:324" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="333:437" placeholder=" Show the form for creating a new resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="468:491" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="500:654" placeholder=" Store a newly created resource in storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="700:723" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="732:849" placeholder=" Display the specified resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="881:1385" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="917:1078" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1286:1303" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1324:1339" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1360:1377" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1394:1529" placeholder=" Show the form for editing the specified resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="1561:1584" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="1593:1770" placeholder=" Update the specified resource in storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="1822:1845" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="1854:1983" placeholder=" Remove the specified resource from storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="2018:2041" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="44:122" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="165:2043" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="175:271" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1470352050000" expanded="true" signature="301:324" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="333:437" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1470352050000" expanded="true" signature="468:491" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="500:654" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1470352050000" expanded="true" signature="700:723" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="732:849" placeholder=" Display the specified resource. ..." />
+            <marker date="1470352050000" expanded="true" signature="881:1385" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="917:1078" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="1286:1303" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="1324:1339" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="1360:1377" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="1394:1529" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1470352050000" expanded="true" signature="1561:1584" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="1593:1770" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1470352050000" expanded="true" signature="1822:1845" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="1854:1983" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1470352050000" expanded="true" signature="2018:2041" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -558,6 +522,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06315789">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -619,6 +584,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43157893">
           <caret line="257" column="20" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -626,6 +592,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5263158">
           <caret line="50" column="59" selection-start-line="50" selection-start-column="59" selection-end-line="50" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -640,6 +607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18947369">
           <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -668,6 +636,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.50526315">
           <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -675,6 +644,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.294737">
           <caret line="145" column="23" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
+          <folding>
+            <marker date="1470197451000" expanded="true" signature="45:6461" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="79:150" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="151:333" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="248:261" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="262:322" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="370:4873" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="396:1132" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="434:546" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="585:1117" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="655:1098" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="1199:4847" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="1244:4828" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="1348:1360" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="1361:4805" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="1390:1679" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="1708:2444" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="1817:1994" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="2027:2204" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="2237:2414" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="2473:3227" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="2624:2793" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="2826:2996" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="3029:3197" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="3257:4000" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="3397:3566" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="3599:3769" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="3802:3970" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="4030:4776" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="4173:4342" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="4375:4545" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="4578:4746" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="4956:6278" placeholder="..." />
+            <marker date="1470197451000" expanded="true" signature="4990:6261" placeholder="{...}" />
+            <marker date="1470197451000" expanded="true" signature="5132:5258" placeholder="{&quot;zoom&quot;: 16...}" />
+            <marker date="1470197451000" expanded="true" signature="5322:5446" placeholder="{&quot;content&quot;: '&lt;h5&gt;Dans Camper Trailer Hire&lt;/h5&gt;&lt;h6&gt;12 Cameron Street, Clontarf QLD&lt;/h6&gt;'...}" />
+            <marker date="1470197451000" expanded="true" signature="5614:6245" placeholder="{...}" />
+            <marker date="1470197451000" expanded="true" signature="5681:6088" placeholder="{...}" />
+            <marker date="1470197451000" expanded="true" signature="5812:6010" placeholder="{&quot;title&quot;: 'Dan/\'s Camper Trailer Hire'...}" />
+            <marker date="1470197451000" expanded="true" signature="6148:6225" placeholder="{...}" />
+            <marker date="1470197451000" expanded="true" signature="6307:6448" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -690,26 +701,26 @@
         <state vertical-scroll-proportion="-0.8842105">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding>
-            <marker date="1470305908000" expanded="true" signature="44:122" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="165:2043" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="175:271" placeholder=" Display a listing of the resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="301:324" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="333:437" placeholder=" Show the form for creating a new resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="468:491" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="500:654" placeholder=" Store a newly created resource in storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="700:723" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="732:849" placeholder=" Display the specified resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="881:1385" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="917:1078" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1286:1303" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1324:1339" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1360:1377" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1394:1529" placeholder=" Show the form for editing the specified resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="1561:1584" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="1593:1770" placeholder=" Update the specified resource in storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="1822:1845" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="1854:1983" placeholder=" Remove the specified resource from storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="2018:2041" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="44:122" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="165:2043" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="175:271" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1470352050000" expanded="true" signature="301:324" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="333:437" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1470352050000" expanded="true" signature="468:491" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="500:654" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1470352050000" expanded="true" signature="700:723" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="732:849" placeholder=" Display the specified resource. ..." />
+            <marker date="1470352050000" expanded="true" signature="881:1385" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="917:1078" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="1286:1303" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="1324:1339" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="1360:1377" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="1394:1529" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1470352050000" expanded="true" signature="1561:1584" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="1593:1770" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1470352050000" expanded="true" signature="1822:1845" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="1854:1983" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1470352050000" expanded="true" signature="2018:2041" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -719,15 +730,15 @@
         <state vertical-scroll-proportion="0.7894737">
           <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
           <folding>
-            <marker date="1470288682000" expanded="true" signature="27:83" placeholder="..." />
-            <marker date="1470288682000" expanded="true" signature="111:716" placeholder="{...}" />
-            <marker date="1470288682000" expanded="true" signature="117:164" placeholder="..." />
-            <marker date="1470288682000" expanded="true" signature="191:234" placeholder="{...}" />
-            <marker date="1470288682000" expanded="true" signature="239:287" placeholder="..." />
-            <marker date="1470288682000" expanded="true" signature="315:389" placeholder="{...}" />
-            <marker date="1470288682000" expanded="true" signature="418:490" placeholder="{...}" />
-            <marker date="1470288682000" expanded="true" signature="529:713" placeholder="..." />
-            <marker date="1470288682000" expanded="true" signature="572:694" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="27:83" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="111:716" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="117:164" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="191:234" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="239:287" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="315:389" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="418:490" placeholder="{...}" />
+            <marker date="1470352050000" expanded="true" signature="529:713" placeholder="..." />
+            <marker date="1470352050000" expanded="true" signature="572:694" placeholder="..." />
           </folding>
         </state>
       </provider>

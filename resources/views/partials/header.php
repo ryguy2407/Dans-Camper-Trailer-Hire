@@ -56,7 +56,7 @@
 				<ul>
 					<li><a href="/">HOME</a></li>
 					<li><a href="/rates">OUR RATES</a></li>
-					<li><a href="#">BOOK ONLINE</a></li>
+					<li><a href="/booking">BOOK ONLINE</a></li>
 					<li><a href="/contact">CONTACT US</a></li>
 				</ul>
 			</div>
