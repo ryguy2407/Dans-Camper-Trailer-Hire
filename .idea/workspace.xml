@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="02af4d1a-34f8-45ba-ab59-0c0d8b262448" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Camper.php" afterPath="$PROJECT_DIR$/app/Camper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/CamperImage.php" afterPath="$PROJECT_DIR$/app/CamperImage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CamperController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CamperController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/campers/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/campers/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/home.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/partials/header.php" afterPath="$PROJECT_DIR$/resources/views/partials/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
     </list>
     <ignored path="dans.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,15 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/home.blade.php">
+      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5368421">
-              <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-              <folding>
-                <element signature="e#497#540#0#HTML" expanded="true" />
-                <element signature="e#1122#1148#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.85263157">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,7 +45,6 @@
       <list>
         <option value="$PROJECT_DIR$/resources/views/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/page.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/database/migrations/2016_08_03_011645_create_pages_table.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/show.blade.php" />
@@ -75,6 +65,7 @@
         <option value="$PROJECT_DIR$/resources/views/campers/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CamperController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/home.blade.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -125,7 +116,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -140,273 +130,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vendor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="campers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
+              <option name="myItemId" value="danscampers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -504,32 +235,62 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+          <folding>
+            <marker date="1470432469000" expanded="true" signature="170:2333" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="232:1911" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="315:1388" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="349:1369" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="405:1068" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="449:893" placeholder="..." />
+            <marker date="1470432469000" expanded="false" signature="504:539" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="936:1041" placeholder="..." />
+            <marker date="1470432469000" expanded="false" signature="1129:1147" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1148:1346" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1436:1896" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1470:1856" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1516:1833" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1544:1674" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1952:2331" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1996:2324" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="2074:2293" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+          <folding>
+            <marker date="1470432469000" expanded="true" signature="170:2333" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="232:1911" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="315:1388" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="349:1369" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="405:1068" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="449:893" placeholder="..." />
+            <marker date="1470432469000" expanded="false" signature="504:539" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="936:1041" placeholder="..." />
+            <marker date="1470432469000" expanded="false" signature="1129:1147" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1148:1346" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1436:1896" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1470:1856" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1516:1833" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1544:1674" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1952:2331" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1996:2324" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="2074:2293" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CamperController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <marker date="1470305908000" expanded="true" signature="44:122" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="165:2043" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="175:271" placeholder=" Display a listing of the resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="301:324" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="333:437" placeholder=" Show the form for creating a new resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="468:491" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="500:654" placeholder=" Store a newly created resource in storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="700:723" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="732:849" placeholder=" Display the specified resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="881:1385" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="917:1078" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1286:1303" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1324:1339" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1360:1377" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1394:1529" placeholder=" Show the form for editing the specified resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="1561:1584" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="1593:1770" placeholder=" Update the specified resource in storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="1822:1845" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="1854:1983" placeholder=" Remove the specified resource from storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="2018:2041" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -537,13 +298,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.50526315">
           <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34736842">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -586,11 +340,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4105263">
           <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding>
-            <marker date="1470262720000" expanded="true" signature="88:225" placeholder="{...}" />
-            <marker date="1470262720000" expanded="true" signature="94:148" placeholder="..." />
-            <marker date="1470262720000" expanded="true" signature="176:223" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -689,28 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8842105">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <marker date="1470305908000" expanded="true" signature="44:122" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="165:2043" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="175:271" placeholder=" Display a listing of the resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="301:324" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="333:437" placeholder=" Show the form for creating a new resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="468:491" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="500:654" placeholder=" Store a newly created resource in storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="700:723" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="732:849" placeholder=" Display the specified resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="881:1385" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="917:1078" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1286:1303" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1324:1339" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1360:1377" placeholder="..." />
-            <marker date="1470305908000" expanded="true" signature="1394:1529" placeholder=" Show the form for editing the specified resource. ..." />
-            <marker date="1470305908000" expanded="true" signature="1561:1584" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="1593:1770" placeholder=" Update the specified resource in storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="1822:1845" placeholder="{...}" />
-            <marker date="1470305908000" expanded="true" signature="1854:1983" placeholder=" Remove the specified resource from storage. ..." />
-            <marker date="1470305908000" expanded="true" signature="2018:2041" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,17 +445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7894737">
           <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <marker date="1470288682000" expanded="true" signature="27:83" placeholder="..." />
-            <marker date="1470288682000" expanded="true" signature="111:716" placeholder="{...}" />
-            <marker date="1470288682000" expanded="true" signature="117:164" placeholder="..." />
-            <marker date="1470288682000" expanded="true" signature="191:234" placeholder="{...}" />
-            <marker date="1470288682000" expanded="true" signature="239:287" placeholder="..." />
-            <marker date="1470288682000" expanded="true" signature="315:389" placeholder="{...}" />
-            <marker date="1470288682000" expanded="true" signature="418:490" placeholder="{...}" />
-            <marker date="1470288682000" expanded="true" signature="529:713" placeholder="..." />
-            <marker date="1470288682000" expanded="true" signature="572:694" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,9 +453,32 @@
         <state vertical-scroll-proportion="0.5368421">
           <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding>
-            <element signature="e#497#540#0#HTML" expanded="true" />
-            <element signature="e#1122#1148#0#HTML" expanded="true" />
+            <marker date="1470432469000" expanded="true" signature="170:2333" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="232:1911" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="315:1388" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="349:1369" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="405:1068" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="449:893" placeholder="..." />
+            <marker date="1470432469000" expanded="false" signature="504:539" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="936:1041" placeholder="..." />
+            <marker date="1470432469000" expanded="false" signature="1129:1147" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1148:1346" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1436:1896" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1470:1856" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1516:1833" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1544:1674" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1952:2331" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="1996:2324" placeholder="..." />
+            <marker date="1470432469000" expanded="true" signature="2074:2293" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85263157">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
