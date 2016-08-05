@@ -36,4 +36,9 @@ class Camper extends Model
 		}
 		return $text;
 	}
+
+	function bookings()
+	{
+		return $this->belongsToMany('App\Booking');
+	}
 }
