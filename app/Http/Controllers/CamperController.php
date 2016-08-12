@@ -55,11 +55,9 @@ class CamperController extends Controller
         }
 
         $camper = Camper::where('camper_slug', $id)->orWhere('id', $id)->first();
-        $rates = $camper->rates;
         $images = $camper->images;
         return view('campers.show')
             ->with('camper', $camper)
-            ->with('rates', $rates)
             ->with('images', $images);
     }
 

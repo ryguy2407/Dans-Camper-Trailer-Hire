@@ -101,8 +101,8 @@
                                 <div class="columns six">$805</div>
                             </td>
                             <td>
-                                <div class="columns six">$50</div>
-                                <div class="columns six">$80</div>
+                                <div class="columns six">$65</div>
+                                <div class="columns six">$90</div>
                             </td>
                         </tr>
                     </table>

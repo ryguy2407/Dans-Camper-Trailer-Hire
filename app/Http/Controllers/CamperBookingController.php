@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Camper;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -23,9 +24,10 @@ class CamperBookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($camper)
     {
-        //
+        $camper = Camper::find($camper);
+        return view('bookings.create')->with('camper', $camper);
     }
 
     /**

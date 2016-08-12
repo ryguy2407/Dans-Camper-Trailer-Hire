@@ -14,7 +14,7 @@
                             @endif
                         </div>
                         <div class="link">
-                            <a class="button button-primary">BOOK NOW</a>
+                            <a class="button button-primary" href="{{ route('camper.booking.create', ['camper' => $camper->id,]) }}">BOOK NOW</a>
                         </div>
                     </div>
                     <div class="six columns camper" style="position:relative;">

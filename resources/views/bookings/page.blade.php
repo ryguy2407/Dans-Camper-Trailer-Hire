@@ -23,7 +23,7 @@
         <div class="row">
             @foreach($campers as $camper)
                 <div class="columns three text-center">
-                    <a href="{{ route('camper.show', ['id' => $camper->id]) }}">
+                    <a href="{{ route('camper.booking.create', ['camper' => $camper->id]) }}">
                         @if($camper->images->first())
                             <img src="{{ $camper->images->first()->image_url }}" style="width: 100%;">
                         @endif

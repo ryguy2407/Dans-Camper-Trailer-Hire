@@ -5,14 +5,13 @@
 	<title>Dan's Camper Trailer Hire</title>
 	<link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="/css/normalize.css">
-	<link rel="stylesheet" href="/css/skeleton.css">
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/all.css">
 	<script src="/js/jquery-3.1.0.min.js"></script>
 	<script src="/js/cycle2.js"></script>
+	<script src="/js/pickaday.js"></script>
+	<script src="/js/pickaday.jquery.js"></script>
 	<script src="https://use.fontawesome.com/8cf984e967.js"></script>
 	<script>
-		$(document).ready(function(){
 			$(document).ready(function(){
 				$('div.background-bar').css('height', $('div.slideshowWrapper div.slideText').outerHeight() + 20);
 
@@ -33,8 +32,9 @@
 				$('#adv-custom-pager div.columns').css('height', maxHeight);
 
 				$('div.pageHeader h1').css('marginTop', Math.abs(($('div.pageHeader h1').outerHeight() - 150) / 2));
+
+				$('.datepicker').pikaday();
 			});
-		});
 	</script>
 </head>
 <body>
