@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Booking;
 use App\Camper;
+use App\Http\Requests\StoreBookingRequest;
+use App\Jobs\BookingJobs;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -33,12 +36,15 @@ class CamperBookingController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param StoreBookingRequest|Request $request
+     *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( StoreBookingRequest $request )
     {
-        //
+        $booking = Booking::create($request->except('camper_id'));
+        $booking->campers()->attach([$booking->id, $request->get('camper_id')]);
+        $this->dispatch(new BookingJobs($booking));
     }
 
     /**

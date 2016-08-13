@@ -1119,6 +1119,23 @@ div.note {
     font-weight: 800;
 }
 
+div.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+div.alert ul {
+    margin-bottom: 0px;
+}
+
+div.alert ul li:last-child {
+    margin-bottom: 0px;
+}
+
+div.alert-danger {
+    background: #fff1f1;
+}
+
 .text-right {
     text-align: right;
 }

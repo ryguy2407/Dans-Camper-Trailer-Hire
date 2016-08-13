@@ -23,7 +23,19 @@
                     arranged and paid we will then secure your booking.
                 </div>
 
-                <form action="#">
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <form method="POST" action="{{ route('camper.booking.store', ['camper' => $camper->id]) }}">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="camper_id" value="{{ $camper->id }}">
                     <div class="row">
                         <div class="columns six">
                             <label for="first_name">First Name:</label>
@@ -42,12 +54,12 @@
                     </div>
                     <div class="row">
                         <div class="columns six">
-                            <label for="start_date">Pickup Date:</label>
-                            <input type="text" name="start_date" id="start_date" class="datepicker">
+                            <label for="pickup_date">Pickup Date:</label>
+                            <input type="text" name="pickup_date" id="pickup_date" class="datepicker">
                         </div>
                         <div class="columns six">
-                            <label for="end_date">Dropoff Date:</label>
-                            <input type="text" name="end_Date" id="end_date" class="datepicker">
+                            <label for="dropoff_date">Dropoff Date:</label>
+                            <input type="text" name="dropoff_date" id="dropoff_date" class="datepicker">
                         </div>
                     </div>
                     <input type="submit" value="Sumbit Quote Request" class="button button-primary">
