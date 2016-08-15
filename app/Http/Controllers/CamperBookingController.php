@@ -45,6 +45,7 @@ class CamperBookingController extends Controller
         $booking = Booking::create($request->except('camper_id'));
         $booking->campers()->attach([$booking->id, $request->get('camper_id')]);
         $this->dispatch(new BookingJobs($booking));
+        return redirect()->back()->with('success', 'Thanks!, we\'ve recieved your request, we will be in touch soon');
     }
 
     /**

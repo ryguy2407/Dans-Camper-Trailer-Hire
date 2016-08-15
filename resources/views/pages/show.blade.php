@@ -8,6 +8,14 @@
         </div>
     </div>
 
+    @if (session('success'))
+        <div class="container">
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        </div>
+    @endif
+
     <div class="container content">
         <div class="row">
             <div class="columns six">

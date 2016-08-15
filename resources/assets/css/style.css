@@ -69,6 +69,13 @@ div.alert-danger {
     background: #fff1f1;
 }
 
+div.alert-success {
+    background: #eff5d9;
+    margin-top: 20px;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-size: 16px;
+}
+
 .text-right {
     text-align: right;
 }

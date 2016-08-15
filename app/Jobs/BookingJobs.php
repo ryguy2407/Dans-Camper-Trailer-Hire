@@ -35,7 +35,7 @@ class BookingJobs extends Job implements ShouldQueue
      */
     public function handle(Mailer $mailer)
     {
-        $mailer->send('emails.user.bookingRequest', ['booking' => $this->booking], function($m) {
+        $mailer->send('emails.user.bookingRequest', ['booking' => $this->booking, 'campers' => $this->booking->campers()], function($m) {
             $m->from('hello@app.com', 'Your Application');
 
             $m->to('ryanmurrayemail@gmail.com', 'Ryan Murray')->subject('Booking request for ');
