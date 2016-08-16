@@ -8,11 +8,11 @@
         </tr>
         <tr>
             <td valign="top" class="templateColumnContainer">
-                <h1 style="text-align: center;">{{ $booking->first_name }} {{ $booking->last_name }} has requested a booking</h1>
-                <h2>Campers Requested</h2>
+                <h1 style="text-align: center;font-family: Arial;">{{ $booking->first_name }} {{ $booking->last_name }} has requested a booking</h1>
+                <h2 style="font-family: Arial;">Campers Requested</h2>
                 <ul>
                     @foreach($campers->get() as $camper)
-                        <li>{{ $camper->camper_title }}</li>
+                        <li style="font-family: Arial;">{{ $camper->camper_title }}</li>
                 @endforeach
             </td>
         </tr>
