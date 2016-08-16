@@ -17,3 +17,4 @@ Route::get('/booking-enquiry', ['uses' => 'BookingsController@page']);
 Route::get('/', ['uses' => 'PagesController@home']);
 Route::get('/{id}', ['uses' => 'PagesController@show']);
 Route::resource('camper', 'CamperController');
+Route::post('contact', ['uses' => 'PagesController@sendContact', 'as' => 'contact']);

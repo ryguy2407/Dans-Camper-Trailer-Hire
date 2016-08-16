@@ -25,11 +25,21 @@
 
             <div class="columns six">
                 <h3>CONTACT US</h3>
-                <form action="#">
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form action="{{ route('contact') }}" method="POST">
+                    {{ csrf_field() }}
                     <input type="text" name="name" placeholder="Full Name">
-                    <input type="email" name="email" placeholder="Full Name">
+                    <input type="email" name="email" placeholder="Email">
                     <input type="text" name="phone" placeholder="Phone Number">
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <textarea name="enquiry" id="" cols="30" rows="10" placeholder="Message"></textarea>
                     <input type="submit" value="Submit" class="button-primary">
                 </form>
             </div>
