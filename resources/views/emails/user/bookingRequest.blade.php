@@ -2,8 +2,8 @@
 @section('content')
     <table border="0" cellpadding="10" cellspacing="0" width="100%">
         <tr>
-            <td class="templateColumnContainer">
-                <img src="http://placekitten.com/g/480/300" width="100%" style="max-width:100%;" class="columnImage" />
+            <td class="templateColumnContainer" style="text-align: center;">
+                <img src="{{ url('/images/logo.png') }}" width="50%" style="max-width:100%;" class="columnImage" />
             </td>
         </tr>
         <tr>
