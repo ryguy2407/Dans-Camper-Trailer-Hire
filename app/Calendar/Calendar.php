@@ -6,8 +6,6 @@ class Calendar {
 
 	function build_calendar($month, $year, $bookings) {
 
-		$this->bookingDates = [];
-
 		foreach($bookings as $booking) {
 			$this->bookingDates[] = [
 				'pickup_date' => $booking->pickup_date,
@@ -85,35 +83,20 @@ class Calendar {
 
 			$calendar .= "<td class='day' rel='$date'>".$currentDay;
 
-			//Run a couple of loops to check the date of the returned event
-			//against the date that the calendar is on, if it matches
-			//loop through the events part of the array and print
-			//out the camper name and the slug for the class
-			//Here is where we will run a check on the event array and add it
-			//to the day cell.
+			$eventsArray = $this->generateEvents($this->bookingDates);
 
-			$parsedEvents = $this->parseEvents( $this->bookingDates, $date );
-			if($parsedEvents) {
-				foreach ( $parsedEvents as $event ) {
-					foreach ( $event as $event ) {
-						if(Carbon::parse($date)->timestamp == Carbon::parse($event['date'])->timestamp) {
-							$calendar .= "<a href=".$event['url']."><p class=".$event['camper_slug'].">".$event['camper_title']."</p></a>";
-						}
-					}
+			foreach ( $eventsArray as $event ) {
+				if(in_array(Carbon::parse($date)->timestamp, $event)) {
+					$calendar .= "<a href=".$event['url']."><p class=".$event['camper_slug'].">".$event['camper_title']."</p></a>";
 				}
 			}
+//
 			$calendar .= "</td>";
-
-			// Increment counters
 
 			$currentDay++;
 			$dayOfWeek++;
 
 		}
-
-
-
-		// Complete the row of the last week in month, if necessary
 
 		if ($dayOfWeek != 7) {
 
@@ -123,40 +106,35 @@ class Calendar {
 		}
 
 		$calendar .= "</tr>";
-
 		$calendar .= "</table>";
 
 		return $calendar;
 
 	}
 
-	private function parseEvents($events)
+	private function generateEvents($bookings)
 	{
-		$dateArray = $this->getBookingDatesArray($events);
-		return $dateArray;
+		$this->result = [];
+		array_filter($bookings, function($bookings){
+			$bookingLength = $this->returnTotalDays($bookings['pickup_date'], $bookings['dropoff_date']);
+			$this->result[] = $this->createBookingsArray($bookingLength, $bookings);
+		});
+		return $this->result;
 	}
 
-	private function getBookingDatesArray($events)
+	private function returnTotalDays($pickup, $dropoff)
 	{
-		//This function calculates how long the booking is for and creates
-		//an array of days consecutively and returns the array result.
-		$dateArray = [];
+		$pickup = Carbon::parse($pickup);
+		$dropoff = Carbon::parse($dropoff);
+		return $pickup->diffInDays($dropoff);
+	}
 
-		$i = 0;
-		foreach($events as $event) {
-			$pickup = Carbon::parse($event['pickup_date']);
-			$dropoff = Carbon::parse($event['dropoff_date']);
-			$days = $pickup->diffInDays($dropoff);
-
-			for ($x = 0; $x <= $days; $x++) {
-				$dateArray[$x][$i]['date'] = Carbon::parse($event['pickup_date'])->addDay($x);
-				$dateArray[$x][$i]['camper_title'] = $event['camper_title'];
-				$dateArray[$x][$i]['camper_slug'] = $event['camper_slug'];
-				$dateArray[$x][$i]['url'] = $event['url'];
-			}
-			$i++;
+	private function createBookingsArray($bookingLength, $booking)
+	{
+		for ($x = 0; $x <= $bookingLength; $x++) {
+			array_push($booking, Carbon::parse($booking['pickup_date'])->addDay($x)->timestamp);
 		}
-		return $dateArray;
+		return $booking;
 	}
 
 
