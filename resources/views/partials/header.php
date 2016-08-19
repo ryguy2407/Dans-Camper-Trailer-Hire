@@ -34,6 +34,12 @@
 				$('div.pageHeader h1').css('marginTop', Math.abs(($('div.pageHeader h1').outerHeight() - 150) / 2));
 
 				$('.datepicker').pikaday();
+
+				$('td').each(function(){
+					if($(this).children('a').length > 0) {
+						$(this).css('height', '120');
+					}
+				})
 			});
 	</script>
 </head>

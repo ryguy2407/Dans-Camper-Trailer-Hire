@@ -76,6 +76,59 @@ div.alert-success {
     font-size: 16px;
 }
 
+table.bookingsCalendar {
+    width: 100%;
+}
+
+table.bookingsCalendar td {
+    padding: 0px;
+    table-layout: fixed;
+    width: 60px;
+    height: 50px;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+}
+
+table.bookingsCalendar th {
+    text-align: left;
+}
+
+table.bookingsCalendar td p {
+    margin-bottom: 2px;
+    font-size: 11px;
+}
+
+table.bookingsCalendar td p:last-child {
+    margin-bottom: 20px;
+}
+
+table.bookingsCalendar td p {
+    background: #00a0d2;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 0px 10px;
+    position: absolute;
+}
+
+table.bookingsCalendar td p.jayco-hawk {
+    background: red;
+    top:25px;
+}
+table.bookingsCalendar td p.jayco-expanda {
+    background: green;
+    top:45px;
+}
+table.bookingsCalendar td p.gic-camper {
+    background: blue;
+    top:65px;
+}
+table.bookingsCalendar td p.mdc-camper {
+    background: orange;
+    top:85px;
+}
+
 .text-right {
     text-align: right;
 }
