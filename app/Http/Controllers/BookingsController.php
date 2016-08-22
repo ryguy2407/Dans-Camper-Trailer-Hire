@@ -4,21 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Booking;
 use App\Camper;
+use App\Calendar\Calendar;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
 class BookingsController extends Controller
 {
+
     /**
      * Display a listing of the resource.
-     *
      * @return \Illuminate\Http\Response
+     * @internal param calendar $calendar
+     *
      */
     public function index()
     {
         $bookings = Booking::all();
-        return view('bookings.index')->with('bookings', $bookings);
+        $calendar = new Calendar();
+        return view('bookings.index')
+            ->with('bookings', $bookings)
+            ->with('calendar', $calendar);
     }
 
     public function page()
