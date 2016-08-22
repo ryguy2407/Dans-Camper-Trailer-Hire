@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('login', ['uses' => 'SessionsController@login']);
+
 Route::resource('bookings', 'BookingsController');
 Route::resource('camper.booking', 'CamperBookingController');
 Route::get('/booking-enquiry', ['uses' => 'BookingsController@page']);
@@ -18,3 +20,6 @@ Route::get('/', ['uses' => 'PagesController@home']);
 Route::get('/{id}', ['uses' => 'PagesController@show']);
 Route::resource('camper', 'CamperController');
 Route::post('contact', ['uses' => 'PagesController@sendContact', 'as' => 'contact']);
+
+Route::resource('sessions', 'SessionsController');
+Route::resource('user', 'UsersController');

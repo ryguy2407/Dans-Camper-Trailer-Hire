@@ -31,15 +31,7 @@
                     arranged and paid we will then secure your booking.
                 </div>
 
-                @if (count($errors) > 0)
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+                @include('partials.errors')
 
                 <form method="POST" action="{{ route('camper.booking.store', ['camper' => $camper->id]) }}">
                     {{ csrf_field() }}

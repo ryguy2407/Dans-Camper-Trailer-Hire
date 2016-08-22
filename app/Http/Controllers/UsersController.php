@@ -2,41 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Booking;
-use App\Camper;
-use App\Calendar\Calendar;
+use App\Http\Requests\StoreUsersRequest;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class BookingsController extends Controller
+class UsersController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('auth.admin', ['except' => ['show']]);
-    }
-
     /**
      * Display a listing of the resource.
-     * @return \Illuminate\Http\Response
-     * @internal param calendar $calendar
      *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $bookings = Booking::all();
-        $calendar = new Calendar();
-        return view('bookings.index')
-            ->with('bookings', $bookings)
-            ->with('calendar', $calendar);
-    }
-
-    public function page()
-    {
-        $campers = Camper::all();
-        return view('bookings.page')->with('campers', $campers);
+        //
     }
 
     /**
@@ -46,18 +27,20 @@ class BookingsController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param StoreUsersRequest|Request $request
+     *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( StoreUsersRequest $request)
     {
-        //
+        $user = User::create($request->all());
+        return redirect()->route('user.show', ['id' => $user->id]);
     }
 
     /**
@@ -68,7 +51,7 @@ class BookingsController extends Controller
      */
     public function show($id)
     {
-
+        //
     }
 
     /**
