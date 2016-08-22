@@ -2,6 +2,13 @@
 
 @section('content')
 
+    <div class="pageHero" style="background: url('/images/page-bg.jpg') no-repeat;background-size: cover;">
+        <div class="opaque"></div>
+        <div class="container text-right pageHeader" style="height: 100%;">
+            <h1>{{ $camper->camper_title }}</h1>
+        </div>
+    </div>
+
     <div class="container content">
         <div class="row">
             <div class="columns six">
