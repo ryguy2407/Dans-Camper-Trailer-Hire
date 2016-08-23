@@ -1,5 +1,7 @@
 @include('partials/header')
 
+@include('partials.loginbuttons')
+
 <div class="slideshowWrapper cycle-slideshow" data-cycle-pager="#adv-custom-pager" data-cycle-slides="div.slide" data-cycle-pager-template="">
     @foreach($campers as $camper)
         <div class="slide">

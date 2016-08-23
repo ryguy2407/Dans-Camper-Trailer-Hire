@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('login', ['uses' => 'SessionsController@login']);
+Route::get('login', ['uses' => 'SessionsController@login', 'as' => 'login']);
 
 Route::resource('bookings', 'BookingsController');
 Route::resource('camper.booking', 'CamperBookingController');
