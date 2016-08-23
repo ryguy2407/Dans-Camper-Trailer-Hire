@@ -26,7 +26,7 @@ class BookingsController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::all();
+        $bookings = Booking::approved()->get();
         $calendar = new Calendar();
         return view('bookings.index')
             ->with('bookings', $bookings)

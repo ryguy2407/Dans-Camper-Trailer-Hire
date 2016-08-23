@@ -6,6 +6,8 @@ class Calendar {
 
 	function build_calendar($month, $year, $bookings) {
 
+		$this->bookingDates = [];
+
 		foreach($bookings as $booking) {
 			$this->bookingDates[] = [
 				'pickup_date' => $booking->pickup_date,
@@ -63,10 +65,12 @@ class Calendar {
 			$calendar .= "<td class='day' rel='$date'>".$currentDay;
 
 			//Generate event html if date is matched in bookings array
-			$eventsArray = $this->generateEvents( $this->bookingDates );
-			foreach ( $eventsArray as $event ) {
-				if(in_array(Carbon::parse($date)->timestamp, $event)) {
-					$calendar .= "<a href=".$event['url']."><p class=".$event['camper_slug'].">".$event['camper_title']."</p></a>";
+			if(count($this->bookingDates) >= 1) {
+				$eventsArray = $this->generateEvents( $this->bookingDates );
+				foreach ( $eventsArray as $event ) {
+					if ( in_array( Carbon::parse( $date )->timestamp, $event ) ) {
+						$calendar .= "<a href=" . $event['url'] . "><p class=" . $event['camper_slug'] . ">" . $event['camper_title'] . "</p></a>";
+					}
 				}
 			}
 //

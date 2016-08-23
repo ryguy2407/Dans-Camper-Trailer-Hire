@@ -12,4 +12,9 @@ class Booking extends Model
     {
 	    return $this->belongsToMany('App\Camper');
     }
+
+	public function scopeApproved($query)
+	{
+		return $query->where('approved', 1);
+	}
 }
