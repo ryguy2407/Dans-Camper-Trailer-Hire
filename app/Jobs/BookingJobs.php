@@ -40,13 +40,13 @@ class BookingJobs extends Job implements ShouldQueue
         $mailer->send('emails.user.bookingRequest', ['booking' => $this->booking, 'campers' => $this->booking->campers()], function($m) use ($booking) {
             $m->from('bookings@danscampertrailerhire.com.au', 'Dan\'s Camper Trailer Hire');
 
-            $m->to($booking->email, 'Ryan Murray')->subject('Booking request for '.$booking->first_name.' '.$booking->last_name);
+            $m->to($booking->email, $booking->first_name.' '.$booking->last_name)->subject('Booking request for '.$booking->first_name.' '.$booking->last_name);
         });
 
         $mailer->send('emails.admin.bookingRequest', ['booking' => $this->booking, 'campers' => $this->booking->campers()], function($m) use ($booking) {
             $m->from('bookings@danscampertrailerhire.com.au', 'Dan\'s Camper Trailer Hire');
 
-            $m->to('ryanmurrayemail@gmail.com', 'Ryan Murray')->subject('Booking request for '.$booking->first_name.' '.$booking->last_name);
+            $m->to('bookings@hiremycampertrailer.com.au', 'Ryan Murray')->subject('Booking request for '.$booking->first_name.' '.$booking->last_name);
         });
     }
 }

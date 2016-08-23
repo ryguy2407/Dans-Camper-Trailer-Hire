@@ -14,6 +14,10 @@
                     @foreach($campers->get() as $camper)
                         <li style="font-family: Arial;">{{ $camper->camper_title }}</li>
                 @endforeach
+                </ul>
+                <h2 style="font-family: Arial;">Dates Requested</h2>
+                <p style="font-family: Arial;">Pickup Date: {{ $booking->pickup_date }}</p>
+                <p style="font-family: Arial;">Dropoff Date: {{ $booking->dropoff_date }}</p>
             </td>
         </tr>
     </table>
