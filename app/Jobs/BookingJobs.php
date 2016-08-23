@@ -35,16 +35,18 @@ class BookingJobs extends Job implements ShouldQueue
      */
     public function handle(Mailer $mailer)
     {
-        $mailer->send('emails.user.bookingRequest', ['booking' => $this->booking, 'campers' => $this->booking->campers()], function($m) {
-            $m->from('hello@app.com', 'Your Application');
+        $booking = $this->booking;
 
-            $m->to('ryanmurrayemail@gmail.com', 'Ryan Murray')->subject('Booking request for ');
+        $mailer->send('emails.user.bookingRequest', ['booking' => $this->booking, 'campers' => $this->booking->campers()], function($m) use ($booking) {
+            $m->from('bookings@danscampertrailerhire.com.au', 'Dan\'s Camper Trailer Hire');
+
+            $m->to($booking->email, 'Ryan Murray')->subject('Booking request for '.$booking->first_name.' '.$booking->last_name);
         });
 
-        $mailer->send('emails.admin.bookingRequest', ['booking' => $this->booking, 'campers' => $this->booking->campers()], function($m) {
-            $m->from('hello@app.com', 'Your Application');
+        $mailer->send('emails.admin.bookingRequest', ['booking' => $this->booking, 'campers' => $this->booking->campers()], function($m) use ($booking) {
+            $m->from('bookings@danscampertrailerhire.com.au', 'Dan\'s Camper Trailer Hire');
 
-            $m->to('ryanmurrayemail@gmail.com', 'Ryan Murray')->subject('Booking request for ');
+            $m->to('ryanmurrayemail@gmail.com', 'Ryan Murray')->subject('Booking request for '.$booking->first_name.' '.$booking->last_name);
         });
     }
 }
