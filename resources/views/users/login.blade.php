@@ -27,7 +27,7 @@
                     <label class="text-left" for="password">Password:</label>
                     <input type="password" id="password" name="password" placeholder="Password">
 
-                    <input type="submit" value="Register Account" class="button button-primary">
+                    <input type="submit" value="Login" class="button button-primary">
                 </form>
 
             </div>
