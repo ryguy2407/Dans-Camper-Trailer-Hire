@@ -455,6 +455,12 @@ div.boxed {
     border: 1px solid #ddd;
 }
 
+form.logout {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 @media (max-width: 1200px) {
     div.slideText div.title, div.slideText div.link {
         width: 100%;

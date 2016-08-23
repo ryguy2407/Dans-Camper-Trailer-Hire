@@ -30,4 +30,10 @@ class SessionsController extends Controller
 		return redirect()->back()->with('failed', 'Password or username combo is incorrect');
 	}
 
+	public function destroy()
+	{
+		Auth::logout();
+		return redirect()->back()->with('success', 'You\'ve been logged out');
+	}
+
 }
