@@ -14,8 +14,8 @@ class BookingsController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
-        $this->middleware('auth.admin', ['except' => ['show']]);
+        $this->middleware('auth', ['except' => ['page']]);
+        $this->middleware('auth.admin', ['except' => ['show', 'page']]);
     }
 
     /**
