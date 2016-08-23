@@ -9,6 +9,9 @@
         <tr>
             <td valign="top" class="templateColumnContainer">
                 <h1 style="text-align: center;font-family: Arial;">{{ $booking->first_name }} {{ $booking->last_name }} has requested a booking</h1>
+                <h2 style="font-family: Arial;">Personal Details</h2>
+                <p style="font-family: Arial;">Name: {{ $booking->first_name }} {{ $booking->last_name }}</p>
+                <p style="font-family: Arial;">Email: {{ $booking->email }}</p>
                 <h2 style="font-family: Arial;">Campers Requested</h2>
                 <ul>
                     @foreach($campers->get() as $camper)

@@ -14,7 +14,7 @@
                         Please note that this does not confirm your booking, it is a request only.
                         One of our staff will contact you shortly to confirm booking times and payment
                         of your deposit.<br>
-                        Some dates my not be available, our staff will advise shortly.
+                        Some dates may not be available, our staff will advise shortly.
                     </p>
                 </div>
                 <h2 style="font-family: Arial;">Campers Requested</h2>
