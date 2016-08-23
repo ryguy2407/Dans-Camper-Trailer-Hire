@@ -36,14 +36,16 @@
                 <a class="button button-primary" href="{{ route('camper.booking.create', ['camper' => $camper->id,]) }}" style="display: block;font-size: 18px;">BOOK NOW</a>
             </div>
         </div>
-        <div class="row">
-            <div class="columns eight offset-by-two text-center content">
-                <h1>Video Tour</h1>
-                <div class='embed-container'>
-                    {!! $camper->camper_video !!}
+       @if($camper->camper_video)
+            <div class="row">
+                <div class="columns eight offset-by-two text-center content">
+                    <h1>Video Tour</h1>
+                    <div class='embed-container'>
+                        {!! $camper->camper_video !!}
+                    </div>
                 </div>
             </div>
-        </div>
+        @endif
     </div>
 
 @stop
