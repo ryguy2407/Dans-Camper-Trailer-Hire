@@ -17,4 +17,9 @@ class Booking extends Model
 	{
 		return $query->where('approved', 1);
 	}
+
+	public function scopePending($query)
+	{
+		return $query->where('approved', 0);
+	}
 }

@@ -27,9 +27,11 @@ class BookingsController extends Controller
     public function index()
     {
         $bookings = Booking::approved()->get();
+        $pending = Booking::pending()->get();
         $calendar = new Calendar();
         return view('bookings.index')
             ->with('bookings', $bookings)
+            ->with('pending', $pending)
             ->with('calendar', $calendar);
     }
 

@@ -462,6 +462,20 @@ form.logout, a.login {
     top: 10px;
 }
 
+ul.pendingBookings {
+    margin-left: 0px;
+}
+
+ul li.pendingBooking {
+    list-style: none;
+    margin-left: 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+li.pendingBooking p {
+    margin-bottom: 0px;
+}
+
 @media (max-width: 1200px) {
     div.slideText div.title, div.slideText div.link {
         width: 100%;

@@ -56,7 +56,7 @@
 		<div class="nine columns">
 			<div class="topMeta text-right">
 				<h6 style="font-size: 18px;">(07) 3284 5634</h6>
-				<h6 style="font-size: 18px;">bookings@danscampertrailerhire.com.au</h6>
+				<h6 style="font-size: 18px;">bookings@hiremycampertrailer.com.au</h6>
 			</div>
 			<button class="mobileNav"><i class="fa fa-bars" aria-hidden="true"></i> Toggle navigation</button>
 			<div class="mainNav text-right">
