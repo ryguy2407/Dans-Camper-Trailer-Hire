@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Booking;
 use App\Camper;
 use App\Calendar\Calendar;
+use App\Http\Requests\StoreBookingRequest;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 
 class BookingsController extends Controller
 {
@@ -48,18 +50,22 @@ class BookingsController extends Controller
      */
     public function create()
     {
-        //
+        return view('bookings.admin.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param StoreBookingRequest|Request $request
+     *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( StoreBookingRequest $request )
     {
-        //
+        $booking = Booking::create($request->except('camper_id'));
+        $booking->campers()->attach([$request->get('camper_id')]);
+        return redirect()->route('user.show', ['id' => Auth::user()->id])
+            ->with('success', 'Booking was added it should appear in the pending bookings area');
     }
 
     /**

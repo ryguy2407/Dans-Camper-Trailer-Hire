@@ -30,7 +30,6 @@
                 </div>
                 <h1>Quick Facts</h1>
                 {!! $camper->camper_excerpt !!}
-                <a href="#" class="button button-primary">Click here to see all inclusions</a>
                 <h2>Rates</h2>
                 @include('partials.rates')
                 <a class="button button-primary" href="{{ route('camper.booking.create', ['camper' => $camper->id,]) }}" style="display: block;font-size: 18px;">BOOK NOW</a>

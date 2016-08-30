@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #425b54;
 }
 
+.open-sans {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
 a {
     color: #2cb138;
     text-decoration: none;
@@ -474,6 +478,12 @@ ul li.pendingBooking {
 
 li.pendingBooking p {
     margin-bottom: 0px;
+}
+
+div.userDashboard a.columns {
+    background: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #eee;
 }
 
 @media (max-width: 1200px) {

@@ -65,6 +65,9 @@
 					<li><a href="/rates">OUR RATES</a></li>
 					<li><a href="/booking-enquiry">BOOK ONLINE</a></li>
 					<li><a href="/contact">CONTACT US</a></li>
+					@if(Auth::user())
+						<li><a href="{{ route('user.show', ['id' => Auth::user()->id]) }}">MY ACCOUNT</a></li>
+					@endif
 				</ul>
 			</div>
 		</div>

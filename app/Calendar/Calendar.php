@@ -31,7 +31,7 @@ class Calendar {
 		$dayOfWeek = $dateComponents['wday'];
 		// Create the table tag opener and day headers
 		$calendar = "<table class='bookingsCalendar'>";
-		$calendar .= "<h4>$monthName $year</h4>";
+		$calendar .= "<h5 class='open-sans'>$monthName $year</h5>";
 		$calendar .= "<tr>";
 
 		// Create the calendar headers

@@ -25,7 +25,7 @@ class SessionsController extends Controller
 	{
 		if (Auth::attempt(['email' => $request->get('email'), 'password' => $request->get('password')])) {
 			// Authentication passed...
-			return redirect()->intended('bookings');
+			return redirect()->route('user.show', ['id' => Auth::user()->id]);
 		}
 		return redirect()->back()->with('failed', 'Password or username combo is incorrect');
 	}

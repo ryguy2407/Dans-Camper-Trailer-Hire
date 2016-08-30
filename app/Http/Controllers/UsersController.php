@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Booking;
+use App\Calendar\Calendar;
 use App\Http\Requests\StoreUsersRequest;
 use App\User;
 use Illuminate\Http\Request;
@@ -10,6 +12,11 @@ use App\Http\Requests;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['create', 'store']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -37,9 +44,11 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store( StoreUsersRequest $request)
+    public function store( StoreUsersRequest $request )
     {
         $user = User::create($request->all());
+        $user->name = $request->get('first_name').' '.$request->get('last_name');
+        $user->save();
         return redirect()->route('user.show', ['id' => $user->id]);
     }
 
@@ -51,7 +60,15 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        $bookings = Booking::approved()->get();
+        $pending = Booking::pending()->get();
+        $calendar = new Calendar();
+        return view('users.show')
+            ->with('user', $user)
+            ->with('calendar', $calendar)
+            ->with('bookings', $bookings)
+            ->with('pending', $pending);
     }
 
     /**
