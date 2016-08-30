@@ -2,7 +2,7 @@
 
 @include('partials.loginbuttons')
 
-<div class="slideshowWrapper cycle-slideshow" data-cycle-pager="#adv-custom-pager" data-cycle-slides="div.slide" data-cycle-pager-template="">
+<div class="slideshowWrapper cycle-slideshow" data-cycle-pager-event="mouseover" data-cycle-swipe="true" data-cycle-pager-event-bubble="true" data-cycle-pager="#adv-custom-pager" data-cycle-slides="div.slide" data-cycle-pager-template="">
     @foreach($campers as $camper)
         <div class="slide">
             <div class="background-bar"></div>
@@ -46,7 +46,9 @@
         @foreach($campers as $camper)
             <div class="three columns">
                 @if($camper->featured->first())
-                    <img src="{{ $camper->featured->first()->image_url }}">
+                    <a href="{{ route('camper.show', ['id' => $camper->id]) }}">
+                        <img src="{{ $camper->featured->first()->image_url }}">
+                    </a>
                 @endif
                 <h2>{{ $camper->camper_title }}</h2>
             </div>
