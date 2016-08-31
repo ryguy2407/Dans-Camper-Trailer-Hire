@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="columns twelve">
                     <h1 class="orange text-center">RATES TABLE</h1>
-                    <table style="width: 100%;">
+                    <table style="width: 100%;" class="ratesTable">
                         <tr>
                             <th>CAMPER TYPE</th>
                             <th>SLEEPS</th>
@@ -124,6 +124,47 @@
                             </td>
                         </tr>
                     </table>
+
+                    <div class="mobileTable">
+                        <div class="row">
+                            <div class="columns twelve camper">
+                                <h5>GIC & MDC CAMPERS</h5>
+                                <ul>
+                                <li>4 DAY HIRE OFF PEAK :N/A</li>
+                                <li>4 DAY HIRE PEAK: $250</li>
+                                <li>7 DAY HIRE OFF PEAK: $350</li>
+                                <li>7 DAY HIRE PEAK: $550</li>
+                                <li>EXTRA DAYS OFF PEAK: $50</li>
+                                <li>EXTRA DAYS PEAK: $65</li>
+                                </ul>
+                                <hr>
+                            </div>
+                            <div class="columns twelve camper">
+                                <h5>JAYCO HAWK</h5>
+                                <ul>
+                                    <li>4 DAY HIRE OFF PEAK :N/A</li>
+                                    <li>4 DAY HIRE PEAK: $350</li>
+                                    <li>7 DAY HIRE OFF PEAK: $550</li>
+                                    <li>7 DAY HIRE PEAK: $650</li>
+                                    <li>EXTRA DAYS OFF PEAK: $65</li>
+                                    <li>EXTRA DAYS PEAK: $90</li>
+                                </ul>
+                                <hr>
+                            </div>
+                            <div class="columns twelve camper">
+                                <h5>JAYCO EXPANDA</h5>
+                                <ul>
+                                    <li>4 DAY HIRE OFF PEAK :N/A</li>
+                                    <li>4 DAY HIRE PEAK: $460</li>
+                                    <li>7 DAY HIRE OFF PEAK: $650</li>
+                                    <li>7 DAY HIRE PEAK: $805</li>
+                                    <li>EXTRA DAYS OFF PEAK: $95</li>
+                                    <li>EXTRA DAYS PEAK: $115</li>
+                                </ul>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         @endif

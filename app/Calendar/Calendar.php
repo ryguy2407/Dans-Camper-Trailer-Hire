@@ -14,7 +14,7 @@ class Calendar {
 				'dropoff_date' => $booking->dropoff_date,
 				'camper_title' => $booking->campers->first()->camper_title,
 				'camper_slug' => $booking->campers->first()->camper_slug,
-				'url' => route('camper.booking.show', ['camper' => $booking->campers->first()->id, 'booking' => $booking->id])
+				'url' => route('bookings.show', ['booking' => $booking->id])
 			];
 		}
 

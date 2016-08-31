@@ -22,4 +22,12 @@ class Booking extends Model
 	{
 		return $query->where('approved', 0);
 	}
+
+	public function status($status)
+	{
+		if($status) {
+			return 'Yes';
+		}
+		return 'No';
+	}
 }

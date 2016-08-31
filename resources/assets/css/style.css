@@ -6,6 +6,10 @@ body {
     text-align: left;
 }
 
+strong {
+    font-weight: 800;
+}
+
 form.bookingForm h4 {
     font-family: 'Patua One', cursive;
 }
@@ -486,6 +490,10 @@ div.userDashboard a.columns {
     border: 1px solid #eee;
 }
 
+div.mobileTable {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     div.slideText div.title, div.slideText div.link {
         width: 100%;
@@ -500,6 +508,14 @@ div.userDashboard a.columns {
 @media (max-width: 945px) {
     div.logo img {
         width: 50%;
+    }
+
+    div.mobileTable {
+        display: block;
+    }
+
+    table.ratesTable {
+        display: none;
     }
 
     div.logo {

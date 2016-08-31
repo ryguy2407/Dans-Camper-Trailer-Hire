@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Booking;
 use App\Camper;
+use App\User;
 use App\Calendar\Calendar;
 use App\Http\Requests\StoreBookingRequest;
 use Illuminate\Http\Request;
@@ -76,7 +77,9 @@ class BookingsController extends Controller
      */
     public function show($id)
     {
-
+        $booking = Booking::find($id);
+        $user = User::find(Auth::user()->id);
+        return view('bookings.show')->with('booking', $booking)->with('user', $user);
     }
 
     /**
@@ -87,7 +90,8 @@ class BookingsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $booking = Booking::find($id);
+        return view('bookings.admin.edit')->with('booking', $booking);
     }
 
     /**

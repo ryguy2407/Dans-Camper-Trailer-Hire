@@ -19,11 +19,11 @@
         <div class="row">
             @if($user->isAdmin())
                 <div class="columns four">
-                    <h4 class="open-sans"><strong>Pending Booking Requests</strong></h4>
+                    <h4 class="open-sans">Pending Booking Requests</h4>
                     <ul>
                         @foreach($pending as $booking)
                             <li>
-                                <a href="#">{{ $booking->first_name }} {{ $booking->last_name }} - {{ $booking->campers->first()->camper_title }}</a>
+                                <a href="{{ route('bookings.show', ['id' => $booking->id]) }}">{{ $booking->first_name }} {{ $booking->last_name }} - {{ $booking->campers->first()->camper_title }}</a>
                                 <ul>
                                     <li>Pickup Date: {{ $booking->pickup_date }}</li>
                                     <li>Dropoff Date: {{ $booking->dropoff_date }}</li>
@@ -34,12 +34,11 @@
 
                     <hr>
 
-                    <h4 class="open-sans"><strong>Create a new booking</strong></h4>
-                    <a href="{{ route('bookings.create') }}" style="width: 100%;" class="button button-primary ajax">MAKE A BOOKING</a>
+                    <a href="{{ route('bookings.create') }}" style="width: 100%;" class="button button-primary ajax">CREATE A BOOKING</a>
 
                 </div>
                 <div class="columns eight">
-                    <h4 class="open-sans"><strong>Booking Calendar</strong></h4>
+                    <h4 class="open-sans">Booking Calendar</h4>
                     {!! $calendar->build_calendar(date('n'), date('Y'), $bookings) !!}
                 </div>
             @endif
