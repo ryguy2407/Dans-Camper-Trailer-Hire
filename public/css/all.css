@@ -1561,6 +1561,12 @@ div.mobileTable {
     display: none;
 }
 
+input[type="submit"].button-red {
+    background-color: #aa1f1f;
+    border: none;
+    font-family: 'Patua One', sans-serif;
+}
+
 @media (max-width: 1200px) {
     div.slideText div.title, div.slideText div.link {
         width: 100%;

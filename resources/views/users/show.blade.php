@@ -40,6 +40,20 @@
                 <div class="columns eight">
                     <h4 class="open-sans">Booking Calendar</h4>
                     {!! $calendar->build_calendar(date('n'), date('Y'), $bookings) !!}
+                    <hr>
+                    <h4 class="open-sans">Archived Bookings</h4>
+                    <ul>
+                        @foreach($trashed as $trash)
+                            <li>
+                                {{ $trash->first_name }} {{ $trash->last_name }} - <a href="{{ route('bookings.restore', ['id' => $trash->id]) }}">Restore</a>
+                                <ul>
+                                    <li>Camper: {{ $trash->campers->first()->camper_title }}</li>
+                                    <li>Pickup Date: {{ $trash->pickup_date }}</li>
+                                    <li>Dropoff Date: {{ $trash->dropoff_date }}</li>
+                                </ul>
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
             @endif
         </div>

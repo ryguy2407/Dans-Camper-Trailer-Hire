@@ -36,6 +36,11 @@
                 <hr>
                 @if($user->isAdmin())
                     <a href="{{ route('bookings.edit', ['id' => $booking->id])  }}" class="button button-primary" style="width: 100%;">Update Booking</a>
+                    <form action="{{ route('bookings.destroy', ['id' => $booking->id]) }}" method="POST">
+                        {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
+                        <input type="submit" value="Archive this booking" class="button button-red">
+                    </form>
                 @endif
             </div>
 

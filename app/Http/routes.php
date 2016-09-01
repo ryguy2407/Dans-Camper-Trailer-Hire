@@ -14,6 +14,7 @@
 Route::get('login', ['uses' => 'SessionsController@login', 'as' => 'login']);
 
 Route::resource('bookings', 'BookingsController');
+Route::get('bookings/{id}/restore', ['as' => 'bookings.restore', 'uses' => 'BookingsController@restore']);
 Route::resource('camper.booking', 'CamperBookingController');
 Route::get('/booking-enquiry', ['uses' => 'BookingsController@page']);
 Route::get('/', ['uses' => 'PagesController@home']);

@@ -97,13 +97,18 @@ class BookingsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param StoreBookingRequest|Request $request
+     * @param  int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $booking = Booking::find($id);
+        $booking->update($request->except('camper_id'));
+        $booking->campers()->sync([$request->get('camper_id')]);
+        $booking->save();
+        return redirect()->route('user.show', ['id' => Auth::user()->id])->with('success', 'Camper has been updated');
     }
 
     /**
@@ -114,6 +119,22 @@ class BookingsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $booking = Booking::find($id);
+        $booking->delete();
+        return redirect()->route('user.show', ['id' => Auth::user()->id])->with('success', 'Booking has been archived');
+    }
+
+	/**
+     * Restore the booking
+     *
+     * @param $id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function restore($id)
+    {
+        $booking = Booking::onlyTrashed()->where('id', $id);
+        $booking->restore();
+        return redirect()->route('user.show', ['id' => Auth::user()->id])->with('success', 'Booking has been restored');
     }
 }

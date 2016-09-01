@@ -63,12 +63,14 @@ class UsersController extends Controller
         $user = User::find($id);
         $bookings = Booking::approved()->get();
         $pending = Booking::pending()->get();
+        $trashed = Booking::onlyTrashed()->get();
         $calendar = new Calendar();
         return view('users.show')
             ->with('user', $user)
             ->with('calendar', $calendar)
             ->with('bookings', $bookings)
-            ->with('pending', $pending);
+            ->with('pending', $pending)
+            ->with('trashed', $trashed);
     }
 
     /**

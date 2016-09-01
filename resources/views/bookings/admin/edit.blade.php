@@ -20,6 +20,7 @@
 
                 <form action="{{ route('bookings.update', ['id' => $booking->id]) }}" method="POST">
                     {{ csrf_field() }}
+                    {{ method_field('PUT') }}
 
                     <label class="text-left" for="first_name">First Name:</label>
                     <input type="text" value="{{ $booking->first_name }}" id="first_name" name="first_name" placeholder="First Name">
@@ -50,12 +51,29 @@
                     </div>
 
                     <label for="status">Status</label>
+                    <select name="approved" id="approved" style="width: 100%;">
+                        <option value="0">Pending</option>
+                        <option value="1">Approved</option>
+                    </select>
 
+                    <label for="deposit">Deposit Paid</label>
+                    <select name="deposit" id="deposit" style="width: 100%;">
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
 
                     <input type="submit" value="Update Camper" class="button button-primary">
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('select#camper_id').val({{ $booking->campers->first()->id }});
+            $('select#approved').val({{ $booking->approved }});
+            $('select#deposit').val({{ $booking->deposit }});
+        });
+    </script>
 
 @stop

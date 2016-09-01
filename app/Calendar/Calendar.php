@@ -18,6 +18,15 @@ class Calendar {
 			];
 		}
 
+		if(isset($_GET['month'])) {
+			$month = $_GET['month'];
+		}
+		if(isset($_GET['year'])) {
+			$year = $_GET['year'];
+		}
+		$next_month_link = '<a style="float:right;" href="?month='.($month != 12 ? $month + 1 : 1).'&year='.($month != 12 ? $year : $year + 1).'" class="control">Next Month >></a>';
+		$previous_month_link = '<a style="float:left;" href="?month='.($month != 1 ? $month - 1 : 12).'&year='.($month != 1 ? $year : $year - 1).'" class="control"><< 	Previous Month</a>';
+
 		$daysOfWeek = array('S','M','T','W','T','F','S');
 		$firstDayOfMonth = mktime(0,0,0,$month,1,$year);
 		$numberDays = date('t',$firstDayOfMonth);
@@ -31,7 +40,9 @@ class Calendar {
 		$dayOfWeek = $dateComponents['wday'];
 		// Create the table tag opener and day headers
 		$calendar = "<table class='bookingsCalendar'>";
-		$calendar .= "<h5 class='open-sans'>$monthName $year</h5>";
+		$calendar .= "<h5 class='open-sans text-center'>$monthName $year</h5>";
+		$calendar .= $previous_month_link;
+		$calendar .= $next_month_link;
 		$calendar .= "<tr>";
 
 		// Create the calendar headers
