@@ -11,8 +11,9 @@
 
     <div class="container content">
         <div class="row">
-            <div class="columns twelve">
+            <div class="columns twelve" style="position: relative;">
                 <h1>Hi {{ $user->name }} <a href="#"> <small style="font-size: 50%;">- edit</small></a></h1>
+                <a href="{{ route('bookings.create') }}" style="position:absolute;top: 10px;right: 0;font-size: 120%;width: 300px;" class="button button-primary ajax">CREATE A BOOKING</a>
             </div>
         </div>
 
@@ -31,17 +32,14 @@
                             </li>
                         @endforeach
                     </ul>
+                    {{ $pending->links() }}
 
                     <hr>
 
-                    <a href="{{ route('bookings.create') }}" style="width: 100%;" class="button button-primary ajax">CREATE A BOOKING</a>
-
-                </div>
-                <div class="columns eight">
-                    <h4 class="open-sans">Booking Calendar</h4>
-                    {!! $calendar->build_calendar(date('n'), date('Y'), $bookings) !!}
-                    <hr>
-                    <h4 class="open-sans">Archived Bookings</h4>
+                    <h4 class="open-sans" style="margin-top: 20px;">Archived Bookings</h4>
+                    <form action="#">
+                        <input type="tex" name="archiveSearch" placeholder="Search bookings">
+                    </form>
                     <ul>
                         @foreach($trashed as $trash)
                             <li>
@@ -54,7 +52,16 @@
                             </li>
                         @endforeach
                     </ul>
+
+                    {{ $trashed->links() }}
+
                 </div>
+                <div class="columns eight">
+                    <h4 class="open-sans">Booking Calendar</h4>
+                    {!! $calendar->build_calendar(date('n'), date('Y'), $bookings) !!}
+                </div>
+
+
             @endif
         </div>
     </div>
