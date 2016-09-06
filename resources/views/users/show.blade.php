@@ -37,9 +37,11 @@
                     <hr>
 
                     <h4 class="open-sans" style="margin-top: 20px;">Archived Bookings</h4>
-                    <form action="#">
-                        <input type="tex" name="archiveSearch" placeholder="Search bookings">
-                    </form>
+                    <input type="text" id="search-input" />
+                    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+                    <script src="/js/algolia.js"></script>
+
                     <ul>
                         @foreach($trashed as $trash)
                             <li>
@@ -52,8 +54,6 @@
                             </li>
                         @endforeach
                     </ul>
-
-                    {{ $trashed->links() }}
 
                 </div>
                 <div class="columns eight">

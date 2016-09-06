@@ -13,6 +13,7 @@
 	<script src="/js/pickaday.jquery.js"></script>
 	<script src="https://use.fontawesome.com/8cf984e967.js"></script>
 	<script>
+
 			$(document).ready(function(){
 				$('div.background-bar').css('height', $('div.slideshowWrapper div.slideText').outerHeight() + 20);
 

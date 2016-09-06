@@ -19,7 +19,7 @@ class adminComposer
 	{
 		$view->with('bookings', $this->booking->where('approved', 1)->get());
 		$view->with('pending', $this->booking->where('approved', 0)->paginate(2));
-		$view->with('trashed', $this->booking->onlyTrashed()->paginate(2));
+		$view->with('trashed', $this->booking->onlyTrashed()->get());
 		$view->with('calendar', app('calendar'));
 	}
 
