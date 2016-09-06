@@ -36,24 +36,11 @@
 
                     <hr>
 
-                    <h4 class="open-sans" style="margin-top: 20px;">Archived Bookings</h4>
+                    <h4 class="open-sans" style="margin-top: 20px;">Search Bookings</h4>
                     <input type="text" id="search-input" />
                     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
                     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
                     <script src="/js/algolia.js"></script>
-
-                    <ul>
-                        @foreach($trashed as $trash)
-                            <li>
-                                {{ $trash->first_name }} {{ $trash->last_name }} - <a href="{{ route('bookings.restore', ['id' => $trash->id]) }}">Restore</a>
-                                <ul>
-                                    <li>Camper: {{ $trash->campers->first()->camper_title }}</li>
-                                    <li>Pickup Date: {{ $trash->pickup_date }}</li>
-                                    <li>Dropoff Date: {{ $trash->dropoff_date }}</li>
-                                </ul>
-                            </li>
-                        @endforeach
-                    </ul>
 
                 </div>
                 <div class="columns eight">
