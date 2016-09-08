@@ -79,7 +79,8 @@ class BookingsController extends Controller
     {
         $booking = Booking::find($id);
         $user = User::find(Auth::user()->id);
-        return view('bookings.show')->with('booking', $booking)->with('user', $user);
+        $notes = $booking->notes()->get();
+        return view('bookings.show')->with('booking', $booking)->with('user', $user)->with('notes', $notes);
     }
 
     /**
@@ -102,7 +103,7 @@ class BookingsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreBookingRequest $request, $id)
     {
         $booking = Booking::find($id);
         $booking->update($request->except('camper_id'));

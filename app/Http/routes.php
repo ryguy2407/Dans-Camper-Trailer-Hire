@@ -22,5 +22,7 @@ Route::get('/{id}', ['uses' => 'PagesController@show']);
 Route::resource('camper', 'CamperController');
 Route::post('contact', ['uses' => 'PagesController@sendContact', 'as' => 'contact']);
 
+Route::resource('booking.note', 'NotesController');
+
 Route::resource('sessions', 'SessionsController');
 Route::resource('user', 'UsersController');

@@ -18,6 +18,11 @@ class Booking extends Model
 	    return $this->belongsToMany('App\Camper');
     }
 
+	public function notes()
+	{
+		return $this->hasMany('App\Note');
+	}
+
 	public function scopeApproved($query)
 	{
 		return $query->where('approved', 1);

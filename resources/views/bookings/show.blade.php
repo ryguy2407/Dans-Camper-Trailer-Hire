@@ -13,6 +13,7 @@
         <div class="row">
             <div class="columns twelve">
                 <h2>{{ $booking->first_name }} {{ $booking->last_name }}'s Booking</h2>
+                @include('partials.errors')
             </div>
         </div>
         <div class="row">
@@ -45,7 +46,21 @@
             </div>
 
             <div class="columns six">
-
+                @if($user->isAdmin())
+                    <h5 class="open-sans">Booking Notes</h5>
+                    <ul>
+                        @foreach($notes as $note)
+                            <li>{{ $note->note }} | {{ $note->created_at }}</li>
+                        @endforeach
+                    </ul>
+                    <hr>
+                    <h5 class="open-sans">Add a note</h5>
+                    <form action="{{ route('booking.note.store', ['id' => $booking->id]) }}" method="POST">
+                        {{ csrf_field() }}
+                        <input type="text" placeholder="Type a note here" name="note">
+                        <input type="submit" class="button button-primary" value="Add a note">
+                    </form>
+                @endif
             </div>
         </div>
     </div>
