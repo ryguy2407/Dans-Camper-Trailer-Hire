@@ -1,3 +1,5 @@
+@section('title', '| Camper Trailer, Caravan, Holiday Hire')
+
 @include('partials/header')
 
 @include('partials.loginbuttons')

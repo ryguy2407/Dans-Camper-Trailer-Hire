@@ -1,5 +1,9 @@
 @extends('layouts.page')
 
+@section('title')
+    | {{ $page->page_title }}
+@endsection
+
 @section('content')
     <div class="pageHero" style="background: url('images/page-bg.jpg') no-repeat;background-size: cover;">
         <div class="opaque"></div>

@@ -1,5 +1,14 @@
 @extends('layouts.page')
 
+@section('title')
+    | {{ $camper->camper_title }} from
+    @foreach($camper->rates as $rate)
+        @if($rate->hire_period == 'extra-day')
+            {{ $rate->off_peak_price }} per night
+        @endif
+    @endforeach
+@endsection
+
 @section('content')
 
     <div class="pageHero" style="background: url('/images/page-bg.jpg') no-repeat;background-size: cover;">

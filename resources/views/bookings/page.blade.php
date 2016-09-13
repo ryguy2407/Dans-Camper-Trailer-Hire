@@ -1,5 +1,9 @@
 @extends('layouts.page')
 
+@section('title')
+    | Book a Camper
+@endsection
+
 @section('content')
 
     <div class="pageHero" style="background: url('images/page-bg.jpg') no-repeat;background-size: cover;">
