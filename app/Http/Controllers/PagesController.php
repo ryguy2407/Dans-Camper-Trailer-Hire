@@ -21,8 +21,9 @@ class PagesController extends Controller
 
 	public function show($id)
 	{
+		$campers = Camper::all();
 		$page = Page::where('slug', $id)->first();
-		return view('pages.show')->with('page', $page);
+		return view('pages.show')->with('page', $page)->with('campers', $campers);
 	}
 
 	/**
