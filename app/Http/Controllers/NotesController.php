@@ -86,8 +86,10 @@ class NotesController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy($id)
+	public function destroy($booking, $note)
 	{
-		//
+		$note = Note::find($note);
+		$note->delete();
+		return redirect()->back()->with('success', 'Note was deleted');
 	}
 }

@@ -50,7 +50,15 @@
                     <h5 class="open-sans">Booking Notes</h5>
                     <ul>
                         @foreach($notes as $note)
-                            <li>{{ $note->note }} | {{ $note->created_at }}</li>
+                            <li>{{ $note->note }} | {{ $note->created_at }} |
+                                <span class="delete">
+                                    <form style="display: inline-block;margin: 0px;" class="deleteNoteForm" method="POST" action="{{ route('booking.note.destroy', ['booking' => $booking->id, 'note' => $note->id]) }}">
+                                        {{ csrf_field() }}
+                                        {{ method_field('delete') }}
+                                        <button class="delete">Delete Note</button>
+                                    </form>
+                                </span>
+                            </li>
                         @endforeach
                     </ul>
                     <hr>
@@ -64,5 +72,13 @@
             </div>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function(){
+           $('form.deleteNoteForm a').on('click', function(){
+               $(this).parent('form').submit();
+           });
+        });
+    </script>
 
 @stop

@@ -1601,6 +1601,17 @@ ul.pagination li {
     font-style: normal;
 }
 
+button.delete {
+    padding: 0;
+    border: none;
+    letter-spacing: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1;
+    margin: 0px;
+    height: auto;
+    display: inline-block;
+}
+
 @media (max-width: 1200px) {
     div.slideText div.title, div.slideText div.link {
         width: 100%;
