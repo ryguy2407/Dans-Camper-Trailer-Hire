@@ -22,6 +22,12 @@
                 <ul>
                     <li>Booking Confirmed: {{ $booking->status($booking->approved) }}</li>
                     <li>Deposit Paid: {{ $booking->status($booking->deposit) }}</li>
+                    @if($booking->deposit_amount)
+                        <li>Deposit Amount: ${{ $booking->deposit_amount }}</li>
+                    @endif
+                    @if($booking->hire_amount)
+                        <li>Total Hire Amount: ${{ $booking->hire_amount }}</li>
+                    @endif
                 </ul>
                 <hr>
                 <h5 class="open-sans">Campers</h5>

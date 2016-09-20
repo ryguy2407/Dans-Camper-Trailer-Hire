@@ -50,17 +50,17 @@
                         </div>
                     </div>
 
-                    <label for="status">Status</label>
-                    <select name="approved" id="approved" style="width: 100%;">
-                        <option value="0">Pending</option>
-                        <option value="1">Approved</option>
-                    </select>
-
                     <label for="deposit">Deposit Paid</label>
                     <select name="deposit" id="deposit" style="width: 100%;">
                         <option value="0">No</option>
                         <option value="1">Yes</option>
                     </select>
+
+                    <label class="text-left" for="deposit_amount">Deposit Amount:</label>
+                    <input type="text" value="{{ $booking->deposit_amount }}" id="deposit_amount" name="deposit_amount" placeholder="Deposit Amount">
+
+                    <label class="text-left" for="hire_amount">Hire Amount:</label>
+                    <input type="text" value="{{ $booking->hire_amount }}" id="hire_amount" name="hire_amount" placeholder="Hire Amount">
 
                     <input type="submit" value="Update Camper" class="button button-primary">
                 </form>
