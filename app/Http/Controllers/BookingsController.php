@@ -83,6 +83,25 @@ class BookingsController extends Controller
         return view('bookings.show')->with('booking', $booking)->with('user', $user)->with('notes', $notes);
     }
 
+    /* Display the specified resource.
+    *
+    * @param  int  $id
+    * @return \Illuminate\Http\Response
+    */
+    public function trashed($id)
+    {
+        $booking = Booking::onlyTrashed()->where('id', $id)->first();
+        $user = User::find(Auth::user()->id);
+        $notes = $booking->notes()->get();
+        return view('bookings.trashed')->with('booking', $booking)->with('user', $user)->with('notes', $notes);
+    }
+
+    public function trashedIndex()
+    {
+        $trashed = Booking::onlyTrashed()->paginate(10);
+        return view('bookings.archive')->with('trashed', $trashed);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -109,7 +128,8 @@ class BookingsController extends Controller
         $booking->update($request->except('camper_id'));
         $booking->campers()->sync([$request->get('camper_id')]);
         $booking->save();
-        return redirect()->route('user.show', ['id' => Auth::user()->id])->with('success', 'Camper has been updated');
+        return response()->json($booking);
+        //return redirect()->route('user.show', ['id' => Auth::user()->id])->with('success', 'Camper has been updated');
     }
 
     /**

@@ -1163,7 +1163,7 @@ table.bookingsCalendar td {
     padding: 0px;
     table-layout: fixed;
     width: 60px;
-    height: 50px;
+    height: 80px;
     vertical-align: top;
     overflow: hidden;
     position: relative;
@@ -1178,34 +1178,31 @@ table.bookingsCalendar td p {
     font-size: 11px;
 }
 
-table.bookingsCalendar td p:last-child {
-    margin-bottom: 20px;
+table.bookingsCalendar td a:last-child {
+    margin-bottom: 10px;
+    display: block;
 }
 
 table.bookingsCalendar td p {
     background: #00a0d2;
     color: #fff;
-    display: block;
-    width: 100%;
+    display: inline-block;
     padding: 0px 10px;
-    position: absolute;
+    position: relative;
+    margin-right: 10px;
 }
 
 table.bookingsCalendar td p.jayco-hawk {
     background: red;
-    top:25px;
 }
 table.bookingsCalendar td p.jayco-expanda {
     background: green;
-    top:45px;
 }
 table.bookingsCalendar td p.gic-camper {
     background: blue;
-    top:65px;
 }
 table.bookingsCalendar td p.mdc-camper {
     background: orange;
-    top:85px;
 }
 
 .text-right {
@@ -1565,6 +1562,16 @@ input[type="submit"].button-red {
     background-color: #aa1f1f;
     border: none;
     font-family: 'Patua One', sans-serif;
+    color: #fff;
+    display: block;
+}
+
+a.button-red {
+    background: #aa1f1f;
+    color: #fff !important;
+    display: block;
+    padding: 10px;
+    text-align: center;
 }
 
 ul.pagination li {
@@ -1609,7 +1616,114 @@ button.delete {
     line-height: 1;
     margin: 0px;
     height: auto;
+}
+
+span.holiday {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: #ffb0ae;
+    z-index: -1;
+    border-radius: 16px;
+}
+
+span.dayWrapper {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    top:3px;
+}
+
+ul.adminNav {
+    margin: 20px 0;
+    padding:0px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul.adminNav li {
     display: inline-block;
+    margin: 0px;
+}
+
+ul.adminNav li a {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+ul.adminNav li a.active {
+    background: #f4f4f4;
+}
+
+div.tabbed-content > div.columns {
+    display: none;
+}
+
+div.tabbed-content div.modalContainer div.columns {
+    display: block;
+}
+
+div.tabbed-content div.columns.active {
+    display: block;
+}
+
+div.modalContainer {
+    display: none;
+    overflow: scroll;
+    position: fixed;
+    background: #fff;
+    width: 70%;
+    left: 15%;
+    top: 5%;
+    height: 90%;
+    z-index: 1000;
+    padding: 40px;
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.3);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+div.modalContainer div.container {
+    width: 100%;
+    padding: 0px;
+}
+
+div.close {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    background: #6d6868;
+    padding: 7px 10px;
+    border-radius: 16px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+div.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0px;
+}
+
+input.error, input.error:focus {
+    border: 1px solid red !important;
+    background: #ffe1df;
+}
+
+small.errormsg {
+    margin: -10px 0 10px 0;
+    display: block;
 }
 
 @media (max-width: 1200px) {

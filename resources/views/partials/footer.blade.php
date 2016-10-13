@@ -8,6 +8,8 @@
     </div>
 </div>
 
+@yield('scripts')
+
 <!-- Start of LiveChat (www.livechatinc.com) code -->
 <script type="text/javascript">
     window.__lc = window.__lc || {};

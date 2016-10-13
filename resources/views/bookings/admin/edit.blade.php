@@ -1,24 +1,14 @@
-@extends('layouts.page')
-
-@section('content')
-
-    <div class="pageHero" style="background: url('/images/page-bg.jpg') no-repeat;background-size: cover;">
-        <div class="opaque"></div>
-        <div class="container text-right pageHeader" style="height: 100%;">
-            <h1>UPDATE BOOKING</h1>
-        </div>
-    </div>
-
+<div class="close">X</div>
     <div class="content container">
         <div class="row">
-            <div class="columns six offset-by-three boxed">
+            <div class="columns twelve">
                 <h3 class="text-center">UPDATE BOOKING</h3>
 
                 <div class="text-left">
                     @include('partials.errors')
                 </div>
 
-                <form action="{{ route('bookings.update', ['id' => $booking->id]) }}" method="POST">
+                <form class="ajax" action="{{ route('bookings.update', ['id' => $booking->id]) }}" method="POST">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
 
@@ -75,5 +65,3 @@
             $('select#deposit').val({{ $booking->deposit }});
         });
     </script>
-
-@stop

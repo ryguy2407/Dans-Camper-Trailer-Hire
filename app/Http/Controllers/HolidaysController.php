@@ -2,21 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use AlgoliaSearch\Client as Algolia;
-use App\Booking;
-use App\Http\Requests\StoreUsersRequest;
-use App\Jobs\PushArchivedBookingsToSearch;
-use App\User;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Illuminate\Support\Facades\DB;
+use App\Http\Requests\HolidayRequest;
+use App\Holiday;
 
-class UsersController extends Controller
+class HolidaysController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['create', 'store']]);
+        $this->middleware('auth.admin');
     }
 
     /**
@@ -26,7 +21,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $holidays = Holiday::paginate(10);
+        return view('holidays.index')->with('holidays', $holidays);
     }
 
     /**
@@ -36,22 +32,20 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+        return view('holidays.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param StoreUsersRequest|Request $request
+     * @param HolidayRequest|Request $request
      *
      * @return \Illuminate\Http\Response
      */
-    public function store( StoreUsersRequest $request )
+    public function store(HolidayRequest $request)
     {
-        $user = User::create($request->all());
-        $user->name = $request->get('first_name').' '.$request->get('last_name');
-        $user->save();
-        return redirect()->route('user.show', ['id' => $user->id]);
+        Holiday::create($request->except('_token'));
+        return redirect()->back()->with('success', 'Holidays Added');
     }
 
     /**
@@ -62,12 +56,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
-
-        $this->dispatch(new PushArchivedBookingsToSearch());
-
-        return view('users.show')
-            ->with('user', $user);
+        //
     }
 
     /**
@@ -78,19 +67,24 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $holiday = Holiday::find($id);
+        return view('holidays.edit')->with('holiday', $holiday);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param HolidayRequest|Request $request
+     * @param  int $id
+     *
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(HolidayRequest $request, $id)
     {
-        //
+        $holiday = Holiday::find($id);
+        $holiday->update($request->all());
+        $holiday->save();
+        return response()->json($holiday);
     }
 
     /**
@@ -101,6 +95,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $holiday = Holiday::find($id);
+        $holiday->delete();
     }
 }

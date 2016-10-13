@@ -42,7 +42,7 @@ class ContactJob extends Job implements ShouldQueue
         $mailer->send('emails.user.contact', $this->formData, function($m) use ($data) {
             $m->from($data['email'], $data['name']);
 
-            $m->to('bookings@hiremycampertrailer.com.au', 'Dan\'s Camper Trailer Hire')->subject($data['name'].' has made an enquiry');
+            $m->to('bookings@danscampertrailerhire.com.au', 'Dan\'s Camper Trailer Hire')->subject($data['name'].' has made an enquiry');
         });
     }
 }

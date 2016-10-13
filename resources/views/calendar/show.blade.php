@@ -1,0 +1,1 @@
+{!! $calendar->build_calendar(date('n'), date('Y'), $bookings) !!}

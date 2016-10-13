@@ -41,7 +41,7 @@
 					if($(this).children('a').length > 0) {
 						$(this).css('height', '120');
 					}
-				})
+				});
 			});
 	</script>
 </head>
@@ -67,7 +67,7 @@
 					<li><a href="/booking-enquiry">BOOK ONLINE</a></li>
 					<li><a href="/contact">CONTACT US</a></li>
 					@if(Auth::user())
-						<li><a href="{{ route('user.show', ['id' => Auth::user()->id]) }}">MY ACCOUNT</a></li>
+						<li><a href="{{ route('user.show', ['id' => Auth::user()->id]) }}">ADMIN</a></li>
 					@endif
 				</ul>
 			</div>

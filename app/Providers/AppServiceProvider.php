@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(
-            ['users.show'], 'App\Http\ViewComposers\adminComposer'
+            ['users.show', 'calendar.show', 'bookings.index'], 'App\Http\ViewComposers\adminComposer'
         );
     }
 

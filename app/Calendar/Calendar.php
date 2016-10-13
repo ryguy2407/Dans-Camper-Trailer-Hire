@@ -1,5 +1,6 @@
 <?php namespace App\Calendar;
 
+use App\Holiday;
 use Carbon\Carbon;
 
 class Calendar {
@@ -18,14 +19,16 @@ class Calendar {
 			];
 		}
 
+		$holidays = Holiday::all()->toArray();
+
 		if(isset($_GET['month'])) {
 			$month = $_GET['month'];
 		}
 		if(isset($_GET['year'])) {
 			$year = $_GET['year'];
 		}
-		$next_month_link = '<a style="float:right;" href="?month='.($month != 12 ? $month + 1 : 1).'&year='.($month != 12 ? $year : $year + 1).'" class="control">Next Month >></a>';
-		$previous_month_link = '<a style="float:left;" href="?month='.($month != 1 ? $month - 1 : 12).'&year='.($month != 1 ? $year : $year - 1).'" class="control"><< 	Previous Month</a>';
+		$next_month_link = '<a class="calendarAjax" style="float:right;" href="/calendar/show?month='.($month != 12 ? $month + 1 : 1).'&year='.($month != 12 ? $year : $year + 1).'" class="control">Next Month >></a>';
+		$previous_month_link = '<a class="calendarAjax" style="float:left;" href="/calendar/show?month='.($month != 1 ? $month - 1 : 12).'&year='.($month != 1 ? $year : $year - 1).'" class="control"><< 	Previous Month</a>';
 
 		$daysOfWeek = array('S','M','T','W','T','F','S');
 		$firstDayOfMonth = mktime(0,0,0,$month,1,$year);
@@ -73,18 +76,28 @@ class Calendar {
 
 			$currentDayRel = str_pad($currentDay, 2, "0", STR_PAD_LEFT);
 			$date = "$year-$month-$currentDayRel";
-			$calendar .= "<td class='day' rel='$date'>".$currentDay;
+			$calendar .= "<td class='day' rel='$date'>"."<span class='dayWrapper'>".$currentDay."</span>";
+
+			//Generate holiday html if they exist
+			if(count($holidays) >= 1) {
+				$eventsArray = $this->generateHolidays( $holidays );
+				foreach ( $eventsArray as $event ) {
+					if ( in_array( Carbon::parse( $date )->timestamp, $event ) ) {
+						$calendar .= "<span class='holiday'></span>";
+					}
+				}
+			}
 
 			//Generate event html if date is matched in bookings array
 			if(count($this->bookingDates) >= 1) {
 				$eventsArray = $this->generateEvents( $this->bookingDates );
 				foreach ( $eventsArray as $event ) {
 					if ( in_array( Carbon::parse( $date )->timestamp, $event ) ) {
-						$calendar .= "<a href=" . $event['url'] . "><p class=" . $event['camper_slug'] . ">" . $event['camper_title'] . "</p></a>";
+						$calendar .= "<a class='modal' href=" . $event['url'] . "><p class=" . $event['camper_slug'] . ">" . $event['camper_title'] . "</p></a>";
 					}
 				}
 			}
-//
+
 			$calendar .= "</td>";
 			$currentDay++;
 			$dayOfWeek++;
@@ -124,5 +137,23 @@ class Calendar {
 			array_push($booking, Carbon::parse($booking['pickup_date'])->addDay($x)->timestamp);
 		}
 		return $booking;
+	}
+
+	private function generateHolidays($holidays)
+	{
+		$this->result = [];
+		array_filter($holidays, function($holidays){
+			$holidayLength = $this->returnTotalDays($holidays['start_date'], $holidays['end_date']);
+			$this->result[] = $this->createHolidaysArray($holidayLength, $holidays);
+		});
+		return $this->result;
+	}
+
+	private function createHolidaysArray($holidayLegnth, $holidays)
+	{
+		for ($x = 0; $x <= $holidayLegnth; $x++) {
+			array_push($holidays, Carbon::parse($holidays['start_date'])->addDay($x)->timestamp);
+		}
+		return $holidays;
 	}
 }

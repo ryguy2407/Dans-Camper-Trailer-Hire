@@ -13,6 +13,17 @@ class Booking extends Model
 
 	protected $guarded = ['id'];
 
+	public function searchableAs()
+	{
+		return env('ALGOLIA_INDEX', 'bookings');
+	}
+
+	/**
+	 * Get the indexable data array for the model.
+	 *
+	 * @return array
+	 */
+
     public function campers()
     {
 	    return $this->belongsToMany('App\Camper');
