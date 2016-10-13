@@ -25,6 +25,7 @@
                 <ul>
                     <li>Pickup Date: {{ $booking->pickup_date }}</li>
                     <li>Dropoff Date: {{ $booking->dropoff_date }}</li>
+                    <li>Email: {{ $booking->email }}</li>
                 </ul>
                 <hr>
                 @if($user->isAdmin())
