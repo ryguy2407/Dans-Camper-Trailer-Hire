@@ -58,6 +58,7 @@
 			<div class="topMeta text-right">
 				<h6 style="font-size: 18px;">(07) 3284 5634</h6>
 				<h6 style="font-size: 18px;">bookings@hiremycampertrailer.com.au</h6>
+				<a class="fbbutton" href="https://www.facebook.com/hiremycamper/?fref=ts" target="_blank"><img src="images/like-us-on-facebook.png" style="width: 120px;"></a>
 			</div>
 			<button class="mobileNav"><i class="fa fa-bars" aria-hidden="true"></i> Toggle navigation</button>
 			<div class="mainNav text-right">
