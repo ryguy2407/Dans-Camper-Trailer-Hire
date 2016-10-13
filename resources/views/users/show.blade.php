@@ -117,7 +117,7 @@
                 });
             });
 
-            $('body').on('click', 'a.calendarAjax', function(e){
+            $('body').on('click', 'a.calendarAjax, ul.pagination a', function(e){
                 e.preventDefault();
                 $.ajax({
                     url: $(this).attr('href'),
