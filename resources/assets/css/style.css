@@ -676,15 +676,19 @@ a.fbbutton {
     }
 
     a.fbbutton {
-        display: block;
-        float: none;
-        margin: 10px 0 0 0;
+        display: none;
     }
 }
 
 @media (max-width: 945px) {
     div.logo img {
         width: 50%;
+    }
+
+    a.fbbutton {
+        display: block;
+        float: none;
+        margin: 10px 0 0 0;
     }
 
     div.mobileTable {
