@@ -67,6 +67,7 @@
 					<li><a href="/rates">OUR RATES</a></li>
 					<li><a href="/booking-enquiry">BOOK ONLINE</a></li>
 					<li><a href="/contact">CONTACT US</a></li>
+					<li><a href="http://blog.danscampertrailerhire.com.au" target="_blank">BLOG</a></li>
 					@if(Auth::user())
 						<li><a href="{{ route('user.show', ['id' => Auth::user()->id]) }}">ADMIN</a></li>
 					@endif
