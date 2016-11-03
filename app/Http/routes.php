@@ -18,8 +18,11 @@ Route::get('bookings/trashed/all', ['as' => 'bookings.trashed.index', 'uses' => 
 Route::get('bookings/{id}/trashed', ['as' => 'bookings.trashed', 'uses' => 'BookingsController@trashed']);
 Route::get('bookings/{id}/restore', ['as' => 'bookings.restore', 'uses' => 'BookingsController@restore']);
 Route::resource('camper.booking', 'CamperBookingController');
+
 Route::get('/booking-enquiry', ['uses' => 'BookingsController@page']);
+
 Route::get('/', ['uses' => 'PagesController@home']);
+
 Route::resource('camper', 'CamperController');
 Route::post('contact', ['uses' => 'PagesController@sendContact', 'as' => 'contact']);
 

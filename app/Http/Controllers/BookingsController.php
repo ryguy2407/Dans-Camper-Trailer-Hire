@@ -51,7 +51,8 @@ class BookingsController extends Controller
      */
     public function create()
     {
-        return view('bookings.admin.create');
+        $campers = Camper::all();
+        return view('bookings.admin.create')->with('campers', $campers);
     }
 
     /**
@@ -111,7 +112,8 @@ class BookingsController extends Controller
     public function edit($id)
     {
         $booking = Booking::find($id);
-        return view('bookings.admin.edit')->with('booking', $booking);
+        $campers = Camper::all();
+        return view('bookings.admin.edit')->with('booking', $booking)->with('campers', $campers);
     }
 
     /**

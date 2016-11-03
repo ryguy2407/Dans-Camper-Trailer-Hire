@@ -6,6 +6,7 @@
 
 <div class="slideshowWrapper cycle-slideshow" data-cycle-pager-event="mouseover" data-cycle-swipe="true" data-cycle-pager-event-bubble="true" data-cycle-pager="#adv-custom-pager" data-cycle-slides="div.slide" data-cycle-pager-template="">
     @foreach($campers as $camper)
+        @if($camper->public)
         <div class="slide">
             <div class="background-bar"></div>
             <div class="container">
@@ -41,11 +42,13 @@
                 <hr>
             </div>
         </div>
+        @endif
     @endforeach
 
 <div class="container">
     <div id="adv-custom-pager" class="row">
         @foreach($campers as $camper)
+            @if($camper->public)
             <div class="three columns">
                 @if($camper->featured->first())
                     <a href="{{ route('camper.show', ['id' => $camper->id]) }}">
@@ -54,6 +57,7 @@
                 @endif
                 <h2>{{ $camper->camper_title }}</h2>
             </div>
+            @endif
         @endforeach
     </div>
 </div>

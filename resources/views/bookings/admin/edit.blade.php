@@ -23,10 +23,9 @@
 
                     <label class="text-left" for="camper_id">Camper:</label>
                     <select name="camper_id" id="camper_id" style="width: 100%;">
-                        <option value="1">MDC Camper</option>
-                        <option value="2">GIC Camper</option>
-                        <option value="3">Jayco Hawk</option>
-                        <option value="4">Jayco Expanda</option>
+                        @foreach($campers as $camper)
+                            <option value="{{ $camper->id }}">{{ $camper->camper_title }}</option>
+                        @endforeach
                     </select>
 
                     <div class="row">
