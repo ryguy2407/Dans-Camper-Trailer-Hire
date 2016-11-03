@@ -14,6 +14,7 @@ class Calendar {
 				'pickup_date' => $booking->pickup_date,
 				'dropoff_date' => $booking->dropoff_date,
 				'camper_title' => $booking->campers->first()->camper_title,
+				'nickname' => $booking->campers->first()->nickname,
 				'camper_slug' => $booking->campers->first()->camper_slug,
 				'url' => route('bookings.show', ['booking' => $booking->id])
 			];
@@ -93,7 +94,7 @@ class Calendar {
 				$eventsArray = $this->generateEvents( $this->bookingDates );
 				foreach ( $eventsArray as $event ) {
 					if ( in_array( Carbon::parse( $date )->timestamp, $event ) ) {
-						$calendar .= "<a class='modal' href=" . $event['url'] . "><p class=" . $event['camper_slug'] . ">" . $event['camper_title'] . "</p></a>";
+						$calendar .= "<a class='modal' href=" . $event['url'] . "><p class=" . $event['camper_slug'] . ">" . $event['camper_title'] ." (". $event['nickname'] .")</p></a>";
 					}
 				}
 			}
