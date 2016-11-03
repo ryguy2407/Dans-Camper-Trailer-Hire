@@ -18,7 +18,7 @@
                 <hr>
                 <h5 class="open-sans">Campers</h5>
                 <ul>
-                    <li>{{ $booking->campers->first()->camper_title }}</li>
+                    <li>{{ $booking->campers->first()->camper_title }} ({{ $booking->campers->first()->nickname }})</li>
                 </ul>
                 <hr>
                 <h5 class="open-sans">Dates</h5>

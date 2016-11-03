@@ -24,7 +24,7 @@
                     <label class="text-left" for="camper_id">Camper:</label>
                     <select name="camper_id" id="camper_id" style="width: 100%;">
                         @foreach($campers as $camper)
-                            <option value="{{ $camper->id }}">{{ $camper->camper_title }}</option>
+                            <option value="{{ $camper->id }}">{{ $camper->camper_title }} ({{ $camper->nickname }})</option>
                         @endforeach
                     </select>
 
