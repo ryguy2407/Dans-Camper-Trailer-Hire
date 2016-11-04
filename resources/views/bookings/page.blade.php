@@ -26,6 +26,7 @@
 
         <div class="row">
             @foreach($campers as $camper)
+                @if($camper->public)
                 <div class="columns three text-center">
                     <a href="{{ route('camper.booking.create', ['camper' => $camper->id]) }}">
                         @if($camper->images->first())
@@ -34,6 +35,7 @@
                         <h3>{{ $camper->camper_title }}</h3>
                     </a>
                 </div>
+                @endif
             @endforeach
         </div>
 

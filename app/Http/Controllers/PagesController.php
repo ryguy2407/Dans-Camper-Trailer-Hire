@@ -23,7 +23,10 @@ class PagesController extends Controller
 	{
 		$campers = Camper::all();
 		$page = Page::where('slug', $id)->first();
-		return view('pages.show')->with('page', $page)->with('campers', $campers);
+		if($page) {
+			return view('pages.show')->with('page', $page)->with('campers', $campers);
+		}
+		return view('pages.404');
 	}
 
 	/**
