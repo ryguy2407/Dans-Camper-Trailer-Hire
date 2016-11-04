@@ -78,36 +78,39 @@
                             </td>
                         </tr>
                         @foreach($campers as $camper)
-                            <tr>
-                                <td><a href="{{ route('camper.show', ['id' => $camper->id]) }}">{{ $camper->camper_title }}</a></td>
-                                <td>4 - 6</td>
-                                @foreach($camper->rates as $rate)
-                                    @if($rate->hire_period == 'four-day')
-                                    <td>
-                                        <div class="columns six">{{ $rate->off_peak_price }}</div>
-                                        <div class="columns six">{{ $rate->peak_price }}</div>
-                                    </td>
-                                    @endif
-                                    @if($rate->hire_period == 'seven-day')
+                            @if($camper->public)
+                                <tr>
+                                    <td><a href="{{ route('camper.show', ['id' => $camper->id]) }}">{{ $camper->camper_title }}</a></td>
+                                    <td>4 - 6</td>
+                                    @foreach($camper->rates as $rate)
+                                        @if($rate->hire_period == 'four-day')
                                         <td>
                                             <div class="columns six">{{ $rate->off_peak_price }}</div>
                                             <div class="columns six">{{ $rate->peak_price }}</div>
                                         </td>
-                                    @endif
-                                    @if($rate->hire_period == 'extra-day')
-                                        <td>
-                                            <div class="columns six">{{ $rate->off_peak_price }}</div>
-                                            <div class="columns six">{{ $rate->peak_price }}</div>
-                                        </td>
-                                    @endif
-                                @endforeach
-                            </tr>
+                                        @endif
+                                        @if($rate->hire_period == 'seven-day')
+                                            <td>
+                                                <div class="columns six">{{ $rate->off_peak_price }}</div>
+                                                <div class="columns six">{{ $rate->peak_price }}</div>
+                                            </td>
+                                        @endif
+                                        @if($rate->hire_period == 'extra-day')
+                                            <td>
+                                                <div class="columns six">{{ $rate->off_peak_price }}</div>
+                                                <div class="columns six">{{ $rate->peak_price }}</div>
+                                            </td>
+                                        @endif
+                                    @endforeach
+                                </tr>
+                            @endif
                         @endforeach
                     </table>
 
                     <div class="mobileTable">
                         <div class="row">
                             @foreach($campers as $camper)
+                                @if($camper->public)
                                 <div class="columns twelve camper">
                                     <h5>{{ $camper->camper_title }}</h5>
                                     <ul>
@@ -128,6 +131,7 @@
                                     </ul>
                                     <hr>
                                 </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>

@@ -388,6 +388,21 @@ div.bookingButton a:hover, a.button:hover, a.button-primary:hover {
     text-decoration: none;
 }
 
+div.booking {
+    width: 33.33%;
+    float: left;
+}
+
+div.booking:nth-child(3n) {
+    margin-right: 0px;
+}
+
+div.pagination {
+    display: block;
+    width: 100%;
+    float: left;
+}
+
 div.errors {
     background: #fce1da;
     padding: 10px;
