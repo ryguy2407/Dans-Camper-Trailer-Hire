@@ -35,6 +35,10 @@ Route::resource('holidays', 'HolidaysController');
 
 Route::resource('notifications', 'NotificationsController');
 
+Route::get('/specials', function(){
+	return view('pages.specials');
+});
+
 Route::get('/{id}', ['uses' => 'PagesController@show']);
 
 Route::get('calendar/show', ['uses' => 'CalendarController@show']);
