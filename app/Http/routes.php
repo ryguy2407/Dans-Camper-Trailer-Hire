@@ -11,6 +11,8 @@
 |
 */
 
+use App\Notifications\Notification;
+
 Route::get('login', ['uses' => 'SessionsController@login', 'as' => 'login']);
 
 Route::resource('bookings', 'BookingsController');
@@ -38,3 +40,8 @@ Route::resource('notifications', 'NotificationsController');
 Route::get('/{id}', ['uses' => 'PagesController@show']);
 
 Route::get('calendar/show', ['uses' => 'CalendarController@show']);
+
+Route::get('/testdate/1', function(){
+	$notification = new Notification();
+    $notification->check($bookings);
+});

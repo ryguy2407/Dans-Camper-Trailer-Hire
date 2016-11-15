@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Jobs\CheckNotificationsJob;
 
 class NotificationsController extends Controller
 {
@@ -15,6 +16,8 @@ class NotificationsController extends Controller
      */
     public function index()
     {
+        $bookings = [['pickup_date' => 'Wed Nov 16 2016', 'notification' => 'test', 'active' => 1]];
+        $this->dispatch(new CheckNotificationsJob($bookings));
         return view('notifications.index');
     }
 
