@@ -36,7 +36,7 @@ class Booking extends Model
 
 	public function scopeApproved($query)
 	{
-		return $query->where('approved', 1);
+		return $query->where('deposit', 1);
 	}
 
 	public function scopePending($query)

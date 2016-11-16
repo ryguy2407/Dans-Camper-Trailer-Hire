@@ -17,7 +17,7 @@ class NotificationsController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::all()->toArray();
+        $bookings = Booking::approved()->get()->toArray();
         $notifications = Notification::all();
         $this->dispatch(new CheckNotificationsJob($bookings));
         return view('notifications.index')->with('notifications', $notifications);
