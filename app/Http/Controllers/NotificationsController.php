@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Booking;
 use App\Http\Requests;
 use App\Jobs\CheckNotificationsJob;
+use App\Notification;
+use Illuminate\Http\Request;
 
 class NotificationsController extends Controller
 {
@@ -16,9 +17,10 @@ class NotificationsController extends Controller
      */
     public function index()
     {
-        $bookings = [['pickup_date' => 'Wed Nov 16 2016', 'notification' => 'test', 'active' => 1]];
+        $bookings = Booking::all()->toArray();
+        $notifications = Notification::all();
         $this->dispatch(new CheckNotificationsJob($bookings));
-        return view('notifications.index');
+        return view('notifications.index')->with('notifications', $notifications);
     }
 
     /**
