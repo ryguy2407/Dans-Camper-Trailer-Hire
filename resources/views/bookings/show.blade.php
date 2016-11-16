@@ -6,7 +6,6 @@
                 <h4>{{ $booking->first_name }} {{ $booking->last_name }}'s Booking</h4>
                 <h5 class="open-sans">Payment Details and Status</h5>
                 <ul>
-                    <li>Booking Confirmed: {{ $booking->status($booking->approved) }}</li>
                     <li>Deposit Paid: {{ $booking->status($booking->deposit) }}</li>
                     @if($booking->deposit_amount)
                         <li>Deposit Amount: ${{ $booking->deposit_amount }}</li>
