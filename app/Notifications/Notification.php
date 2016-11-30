@@ -2,8 +2,9 @@
 
 namespace App\Notifications;
 
-use Carbon\Carbon;
 use App\Notification as Notify;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class Notification {
 
@@ -44,6 +45,11 @@ class Notification {
 				]);
 			}
 		}
+	}
+
+	public function removeAll()
+	{
+		DB::table('notifications')->delete();
 	}
 
 }
