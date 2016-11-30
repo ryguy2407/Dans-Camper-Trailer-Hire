@@ -36,11 +36,7 @@ class CheckNotificationsJob implements ShouldQueue
 
         $notification = new Notification();
         $returned = $notification->check($this->bookingData);
-        if($returned) {
-            $notification->save($returned);
-            return true;
-        } else {
-            $notification->removeAll();
-        }
+        $notification->save($returned);
+        $notification->purge($this->bookingData);
     }
 }

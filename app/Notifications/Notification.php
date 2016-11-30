@@ -47,9 +47,18 @@ class Notification {
 		}
 	}
 
-	public function removeAll()
+	public function purge($bookings)
 	{
-		DB::table('notifications')->delete();
+		$purge = array_filter($bookings, function($bookings) {
+			$diff = $this->date->diffInDays(Carbon::parse($bookings['pickup_date']), false);	
+			if($diff < 0) {
+				return true;
+			}
+		});
+		foreach ($purge as $p) {
+			Notify::where('booking_id',$p['id'])->delete();
+		}
+		
 	}
 
 }
