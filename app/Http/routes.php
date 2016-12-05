@@ -11,7 +11,12 @@
 |
 */
 
-use App\Notifications\Notification;
+$monolog = Log::getMonolog();
+$syslog = new \Monolog\Handler\SyslogHandler('papertrail');
+$formatter = new \Monolog\Formatter\LineFormatter('%channel%.%level_name%: %message% %extra%');
+$syslog->setFormatter($formatter);
+
+$monolog->pushHandler($syslog);
 
 Route::get('login', ['uses' => 'SessionsController@login', 'as' => 'login']);
 
@@ -44,8 +49,3 @@ Route::get('/specials', function(){
 Route::get('/{id}', ['uses' => 'PagesController@show']);
 
 Route::get('calendar/show', ['uses' => 'CalendarController@show']);
-
-Route::get('/testdate/1', function(){
-	$notification = new Notification();
-    $notification->check($bookings);
-});
