@@ -11,6 +11,8 @@
 	<script src="/js/cycle2.js"></script>
 	<script src="/js/pickaday.js"></script>
 	<script src="/js/pickaday.jquery.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+	<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 	<script src="https://use.fontawesome.com/8cf984e967.js"></script>
 	<script>
 

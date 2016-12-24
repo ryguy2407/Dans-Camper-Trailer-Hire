@@ -5,10 +5,10 @@
     </div>
     @endif
 
-    @foreach($notifications as $notification)
         <div class="pickups">
             <h5 class="open-sans">Camper Pickups</h5>
             <hr>
+            @foreach($notifications as $notification)
         	<div class="notification booking">
         		<a class="modal" href="{{ route('bookings.show', ['id' => $notification->booking->id]) }}">{{ $notification->booking->first_name }} {{ $notification->booking->last_name }}</a>
         		<ul style="margin-bottom: 0px;">
@@ -17,8 +17,8 @@
         		</ul>
         		<p>Pickup in {{ $notification->day_count }}</p>
         	</div>
+            @endforeach
         </div>
-    @endforeach
 </div>
 
 <div class="row">

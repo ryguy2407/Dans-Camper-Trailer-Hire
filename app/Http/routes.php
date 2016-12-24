@@ -42,6 +42,10 @@ Route::resource('holidays', 'HolidaysController');
 
 Route::resource('notifications', 'NotificationsController');
 
+Route::resource('blog', 'BlogController');
+
+Route::resource('blog.media', 'MediaController');
+
 Route::get('/specials', function(){
 	return view('pages.specials');
 });
