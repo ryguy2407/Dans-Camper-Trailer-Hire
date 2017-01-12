@@ -26,7 +26,7 @@
 		    			<h5><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h5>
 		    			@if($post->featured_image)
 		    				<a href="{{ route('blog.show', ['id' => $post->id]) }}">
-		    					<img src="{{ asset($post->featured_image) }}" style="width: 100%;">
+		    					<img src="{{ asset('storage/'.$post->featured_image) }}" style="width: 100%;">
 		    				</a>
 		    			@endif
 		    			<p>{{ $post->excerpt }}</p>
