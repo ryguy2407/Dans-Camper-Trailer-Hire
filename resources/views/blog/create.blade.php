@@ -18,14 +18,19 @@
 
     <div class="container content">
         <div class="row">
-            <div class="columns six">
+            <div class="columns eight offset-by-two">
                 <h3>Create a blog post</h3>
-                <form action="{{ route('blog.store') }}" method="POST">
+                <form action="{{ route('blog.store') }}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
 
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input class="form-control" type="text" name="title" id="title" value="{{ old('title') }}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="featured_image">Featured Image</label>
+                        <input class="form-control" type="file" name="featured_image" id="featured_image" value="{{ old('featured_image') }}">
                     </div>
 
                     <input type="hidden" name="slug" id="slug" value="">

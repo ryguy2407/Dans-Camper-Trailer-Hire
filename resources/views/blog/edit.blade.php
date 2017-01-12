@@ -20,7 +20,7 @@
         <div class="row">
             <div class="columns eight offset-by-two">
                 <h3>Edit {{ $blog->title }}</h3>
-                <form action="{{ route('blog.update', ['blog' => $blog->id]) }}" method="POST">
+                <form action="{{ route('blog.update', ['blog' => $blog->id]) }}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     {{ method_field('PUT') }}
 
@@ -35,6 +35,19 @@
                     </div>
 
                     <a href="{{ route('blog.media.index', ['blog' => $blog->id]) }}" class="modal button button-primary">Add images</a>
+
+                    <div class="form-group">
+                        <label for="featured_iamge">Featured Image</label>
+                        <input class="form-control" type="file" name="featured_image" id="featured_image">
+                        @if($blog->featured_image)
+                            <img src="{{ asset($blog->featured_image) }}" style="width: 100px;">
+                        @endif
+                    </div>
+
+                    <div class="form-group">
+                        <label for="excerpt">Excerpt</label>
+                        <textarea class="form-control" type="text" name="excerpt" id="excerpt">{{ $blog->excerpt }}</textarea>
+                    </div>
 
                     <div class="form-group">
                         <label for="content">Content</label>
@@ -55,7 +68,8 @@
     <script>
     var simplemde = new SimpleMDE({
         showIcons: ["code", "table"],
-        styleSelectedText: true
+        styleSelectedText: true,
+        element: document.getElementById("content")
     });
 
     console.log(simplemde);

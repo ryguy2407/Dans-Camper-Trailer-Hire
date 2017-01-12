@@ -20,7 +20,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Blog::all();
+        return view('blog.index')->with('posts', $posts);
     }
 
     /**
@@ -41,7 +42,13 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        Blog::create($request->all());
+        $path = $request->file('featured_image')->store('featured_images', 'public');
+        $blog = Blog::create($request->all());
+        if($path) {
+            $blog->featured_image = $path;
+            $blog->save();
+        }
+
     }
 
     /**
@@ -91,8 +98,15 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $path = $request->file('featured_image')->store('featured_images', 'public');
+        
         $blog = Blog::find($id);
         $blog->update($request->all());
+        
+        if($path) {
+            $blog->featured_image = $path;
+        }
+        
         $blog->save();
         return redirect()->route('blog.show', ['blog' => $blog->id ]);
     }

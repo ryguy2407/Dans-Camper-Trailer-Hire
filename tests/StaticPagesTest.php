@@ -17,5 +17,6 @@ class StaticPagesTest extends TestCase
         $this->visit('/booking-enquiry');
         $this->visit('/contact');
         $this->visit('/login');
+        $this->visit('/blog');
     }
 }

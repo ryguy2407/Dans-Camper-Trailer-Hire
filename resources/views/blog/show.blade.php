@@ -1,5 +1,9 @@
 @extends('layouts.page')
 
+@section('title')
+    | {{ $blog->title }}
+@endsection
+
 @section('content')
     <div class="pageHero" style="background: url('/images/page-bg.jpg') no-repeat;background-size: cover;">
         <div class="opaque"></div>
@@ -22,8 +26,13 @@
                 {!! $blog->markdown($blog->content) !!}
             </div>
         </div>
-        @if(Auth::user() && Auth::user()->isAdmin())
-    		<a href="{{ route('blog.edit', ['id' => $blog->id]) }}">Edit this post</a>
-    	@endif
+
+        <div class="row">
+            <div class="columns eight">
+                @if(Auth::user() && Auth::user()->isAdmin())
+                    <a href="{{ route('blog.edit', ['id' => $blog->id]) }}" class="button button-primary" style="display: block;">Edit this post</a>
+                @endif
+            </div>
+        </div>
     </div>
 @stop
