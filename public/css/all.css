@@ -1376,6 +1376,9 @@ div.pageHero h1 {
     margin: 0;
     padding: 0;
     line-height: 1;
+    position: absolute;
+    width: 90%;
+    right: 0;
 }
 
 div.opaque {
