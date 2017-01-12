@@ -1,5 +1,8 @@
 <?php
 
+use App\Booking;
+use App\Notifications\Notification;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -17,6 +20,14 @@ $formatter = new \Monolog\Formatter\LineFormatter('%channel%.%level_name%: %mess
 $syslog->setFormatter($formatter);
 
 $monolog->pushHandler($syslog);
+
+Route::get('notifications/testing', function(){
+		$bookings = Booking::approved()->get()->toArray();
+		$notification = new Notification();
+        $returned = $notification->check($bookings);
+        $notification->save($returned);
+        $notification->purge($bookings);
+});
 
 Route::get('login', ['uses' => 'SessionsController@login', 'as' => 'login']);
 

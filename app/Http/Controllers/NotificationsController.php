@@ -18,9 +18,10 @@ class NotificationsController extends Controller
     public function index()
     {
         $bookings = Booking::approved()->get()->toArray();
-        $notifications = Notification::all();
+        $pickups = Notification::pickup()->get();
+        $dropoffs = Notification::dropoff()->get();
         $this->dispatch(new CheckNotificationsJob($bookings));
-        return view('notifications.index')->with('notifications', $notifications);
+        return view('notifications.index')->with('pickups', $pickups)->with('dropoffs', $dropoffs);
     }
 
     /**

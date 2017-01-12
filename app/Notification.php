@@ -12,4 +12,14 @@ class Notification extends Model
     {
     	return $this->belongsTo('App\Booking');
     }
+
+    public function scopePickup($query)
+	{
+		return $query->where('notification_type', 'pickup');
+	}
+
+	public function scopeDropoff($query)
+	{
+		return $query->where('notification_type', 'dropoff');
+	}
 }
