@@ -36,6 +36,11 @@
                     <input type="hidden" name="slug" id="slug" value="">
 
                     <div class="form-group">
+                        <label for="excerpt">Excerpt</label>
+                        <textarea class="form-control" type="text" name="excerpt" id="excerpt">{{ old('excerpt') }}</textarea>
+                    </div>
+                    
+                    <div class="form-group">
                         <label for="content">Content</label>
                         <textarea class="form-control" type="text" name="content" id="content">{{ old('content') }}</textarea>
                     </div>
@@ -50,7 +55,11 @@
 @section('scripts')
 
     <script>
-    var simplemde = new SimpleMDE();
+    var simplemde = new SimpleMDE({
+        showIcons: ["code", "table"],
+        styleSelectedText: true,
+        element: document.getElementById("content")
+    });
 
     $("#title").keyup(function(){
         var Text = $(this).val();

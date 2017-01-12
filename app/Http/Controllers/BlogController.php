@@ -42,13 +42,13 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $path = $request->file('featured_image')->store('featured_images', 'public');
+        $path = $request->file('featured_image');
         $blog = Blog::create($request->all());
         if($path) {
-            $blog->featured_image = $path;
+            $blog->featured_image = $path->store('featured_images', 'public');
             $blog->save();
         }
-
+        return redirect()->route('blog.show', ['id' => $blog->id]);
     }
 
     /**
@@ -98,13 +98,13 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $path = $request->file('featured_image')->store('featured_images', 'public');
+        $path = $request->file('featured_image');
         
         $blog = Blog::find($id);
         $blog->update($request->all());
         
         if($path) {
-            $blog->featured_image = $path;
+            $blog->featured_image = $path->store('featured_images', 'public');
         }
         
         $blog->save();

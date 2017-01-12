@@ -40,7 +40,7 @@
                         <label for="featured_iamge">Featured Image</label>
                         <input class="form-control" type="file" name="featured_image" id="featured_image">
                         @if($blog->featured_image)
-                            <img src="{{ asset($blog->featured_image) }}" style="width: 100px;">
+                            <img src="{{ asset('storage/'.$blog->featured_image) }}" style="width: 100px;">
                         @endif
                     </div>
 
