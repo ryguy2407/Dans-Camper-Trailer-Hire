@@ -22,7 +22,7 @@
     	@foreach($posts->chunk(3) as $post)
 	    	<div class="row">
 	    		@foreach($post as $post)
-		    		<div class="columns four">
+		    		<div class="columns three">
 		    			<h5><a href="/blog/{{ $post->slug }}">{{ $post->title }}</a></h5>
 		    			@if($post->featured_image)
 		    				<a href="{{ route('blog.show', ['id' => $post->id]) }}">

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic as Image;
+
 
 class BlogController extends Controller
 {
@@ -45,7 +48,9 @@ class BlogController extends Controller
         $path = $request->file('featured_image');
         $blog = Blog::create($request->all());
         if($path) {
-            $blog->featured_image = $path->store('featured_images', 'public');
+            $resized = Image::make($path)->fit(400)->encode('jpg');
+            Storage::put('public/featured_images/'.$resized->filename.'.jpg', $resized);
+            $blog->featured_image = 'featured_images/'.$resized->filename.'.jpg';
             $blog->save();
         }
         return redirect()->route('blog.show', ['id' => $blog->id]);
@@ -104,7 +109,9 @@ class BlogController extends Controller
         $blog->update($request->all());
         
         if($path) {
-            $blog->featured_image = $path->store('featured_images', 'public');
+            $resized = Image::make($path)->fit(400)->encode('jpg');
+            Storage::put('public/featured_images/'.$resized->filename.'.jpg', $resized);
+            $blog->featured_image = 'featured_images/'.$resized->filename.'.jpg';
         }
         
         $blog->save();
