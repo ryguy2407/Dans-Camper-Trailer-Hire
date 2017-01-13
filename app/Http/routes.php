@@ -25,6 +25,7 @@ Route::get('notifications/testing', function(){
 		$bookings = Booking::approved()->get()->toArray();
 		$notification = new Notification();
         $returned = $notification->check($bookings);
+        //dd($returned);
         $notification->save($returned);
         $notification->purge($bookings);
 });

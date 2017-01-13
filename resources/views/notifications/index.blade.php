@@ -3,14 +3,14 @@
         <div class="pickups">
             <h5 class="open-sans">Camper Pickups</h5>
             <hr>
-            @foreach($pickups as $notification)
+            @foreach($pickups as $pickup)
         	<div class="notification booking">
-        		<a class="modal" href="{{ route('bookings.show', ['id' => $notification->booking->id]) }}">{{ $notification->booking->first_name }} {{ $notification->booking->last_name }}</a>
+        		<a class="modal" href="{{ route('bookings.show', ['id' => $pickup->booking->id]) }}">{{ $pickup->booking->first_name }} {{ $pickup->booking->last_name }}</a>
         		<ul style="margin-bottom: 0px;">
-        			<li>Pickup Date: {{ $notification->booking->pickup_date }}</li>
-        			<li>Camper: {{ $notification->booking->campers->first()->camper_title }}</li>
+        			<li>Pickup Date: {{ $pickup->booking->pickup_date }}</li>
+        			<li>Camper: {{ $pickup->booking->campers->first()->camper_title }}</li>
         		</ul>
-        		<p>Pickup in {{ $notification->day_count }}</p>
+        		<p>Pickup in {{ $pickup->day_count }}</p>
         	</div>
             @endforeach
         </div>
@@ -20,15 +20,15 @@
     <div class="dropoffs">
         <h5 class="open-sans">Camper Drop-off's</h5>
         <hr>
-        @foreach($dropoffs as $notification)
+        @foreach($dropoffs as $dropoff)
             <div class="notification booking">
-                <a class="modal" href="{{ route('bookings.show', ['id' => $notification->booking->id]) }}">{{ $notification->booking->first_name }} {{ $notification->booking->last_name }}</a>
+                <a class="modal" href="{{ route('bookings.show', ['id' => $dropoff->booking->id]) }}">{{ $dropoff->booking->first_name }} {{ $dropoff->booking->last_name }}</a>
                 <ul style="margin-bottom: 0px;">
-                    <li>Dropoff Date: {{ $notification->booking->dropoff_date }}</li>
-                    <li>Camper: {{ $notification->booking->campers->first()->camper_title }}</li>
+                    <li>Dropoff Date: {{ $dropoff->booking->dropoff_date }}</li>
+                    <li>Camper: {{ $dropoff->booking->campers->first()->camper_title }}</li>
                 </ul>
-                <p>Drop off in {{ $notification->day_count }}</p>
+                <p>Drop off in {{ $dropoff->day_count }}</p>
             </div>
-            @endforeach
+        @endforeach
     </div>
 </div>
